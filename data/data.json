@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T00:00:00Z",
+  "generated_at": "2026-06-11T02:57:18Z",
   "schema_version": "1.0",
   "technologies": [
     {
@@ -10,7 +10,21 @@
       "since": "2024-01",
       "switching_cost": "medium",
       "notes": "Standard de facto pour tout projet Node/web",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 109182,
+          "stars_delta_30d": null,
+          "open_issues": 5039,
+          "last_commit_days_ago": 2,
+          "forks": 13423,
+          "fetched_at": "2026-06-11T02:57:10.969148+00:00"
+        },
+        "npm": {
+          "downloads_weekly": 205759155,
+          "downloads_delta_pct": null,
+          "fetched_at": "2026-06-11T02:57:11.028643+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -21,7 +35,16 @@
       "since": "2024-01",
       "switching_cost": "high",
       "notes": "Langage backend mature, écosystème Spring solide",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 22966,
+          "stars_delta_30d": null,
+          "open_issues": 394,
+          "last_commit_days_ago": 0,
+          "forks": 6351,
+          "fetched_at": "2026-06-11T02:57:11.046231+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -32,7 +55,22 @@
       "since": "2024-01",
       "switching_cost": "medium",
       "notes": "Scripting, data, ML/AI — polyvalence maximale",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 73168,
+          "stars_delta_30d": null,
+          "open_issues": 9274,
+          "last_commit_days_ago": 0,
+          "forks": 34716,
+          "fetched_at": "2026-06-11T02:57:11.065271+00:00"
+        },
+        "pypi": {
+          "downloads_last_month": 661916754,
+          "downloads_last_week": 148376576,
+          "downloads_delta_pct": null,
+          "fetched_at": "2026-06-11T02:57:11.091980+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -43,7 +81,13 @@
       "since": "2024-01",
       "switching_cost": "medium",
       "notes": "Dominant en production, écosystème Next.js solide",
-      "metrics": {},
+      "metrics": {
+        "npm": {
+          "downloads_weekly": 134410428,
+          "downloads_delta_pct": null,
+          "fetched_at": "2026-06-11T02:57:11.127419+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -54,7 +98,21 @@
       "since": "2024-03",
       "switching_cost": "high",
       "notes": "Framework complet, pertinent pour grandes applications d'entreprise",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 100316,
+          "stars_delta_30d": null,
+          "open_issues": 1158,
+          "last_commit_days_ago": 0,
+          "forks": 27177,
+          "fetched_at": "2026-06-11T02:57:11.146257+00:00"
+        },
+        "npm": {
+          "downloads_weekly": 5513617,
+          "downloads_delta_pct": null,
+          "fetched_at": "2026-06-11T02:57:11.163913+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -65,7 +123,16 @@
       "since": "2024-01",
       "switching_cost": "high",
       "notes": "Standard Java backend, auto-configuration, large écosystème",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 80866,
+          "stars_delta_30d": null,
+          "open_issues": 503,
+          "last_commit_days_ago": 0,
+          "forks": 41927,
+          "fetched_at": "2026-06-11T02:57:11.181491+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -76,8 +143,22 @@
       "since": "2024-03",
       "switching_cost": "medium",
       "notes": "Architecture modulaire Node.js, TypeScript natif",
-      "metrics": {},
-      "trajectory": "rising"
+      "metrics": {
+        "github": {
+          "stars": 75778,
+          "stars_delta_30d": null,
+          "open_issues": 32,
+          "last_commit_days_ago": 0,
+          "forks": 8313,
+          "fetched_at": "2026-06-11T02:57:11.198999+00:00"
+        },
+        "npm": {
+          "downloads_weekly": 10772173,
+          "downloads_delta_pct": null,
+          "fetched_at": "2026-06-11T02:57:11.216633+00:00"
+        }
+      },
+      "trajectory": "stable"
     },
     {
       "id": "flutter",
@@ -87,7 +168,16 @@
       "since": "2024-01",
       "switching_cost": "high",
       "notes": "Cross-platform iOS/Android/Web avec une seule codebase Dart",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 176890,
+          "stars_delta_30d": null,
+          "open_issues": 12832,
+          "last_commit_days_ago": 0,
+          "forks": 30496,
+          "fetched_at": "2026-06-11T02:57:11.234159+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -98,7 +188,16 @@
       "since": "2024-01",
       "switching_cost": "high",
       "notes": "SGBDR de référence, JSON natif, fiabilité éprouvée",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 21127,
+          "stars_delta_30d": null,
+          "open_issues": 0,
+          "last_commit_days_ago": 0,
+          "forks": 5693,
+          "fetched_at": "2026-06-11T02:57:11.251652+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -109,7 +208,16 @@
       "since": "2024-01",
       "switching_cost": "medium",
       "notes": "Cache in-memory, pub/sub, sessions — indispensable en production",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 74808,
+          "stars_delta_30d": null,
+          "open_issues": 2846,
+          "last_commit_days_ago": 1,
+          "forks": 24663,
+          "fetched_at": "2026-06-11T02:57:11.269146+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -120,7 +228,16 @@
       "since": "2024-01",
       "switching_cost": "low",
       "notes": "Conteneurisation standard, reproductibilité des environnements",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 5901,
+          "stars_delta_30d": null,
+          "open_issues": 781,
+          "last_commit_days_ago": 0,
+          "forks": 2142,
+          "fetched_at": "2026-06-11T02:57:11.286793+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -131,8 +248,17 @@
       "since": "2024-03",
       "switching_cost": "high",
       "notes": "Justifié dès 5+ services. K3s pour environnements légers.",
-      "metrics": {},
-      "trajectory": "rising"
+      "metrics": {
+        "github": {
+          "stars": 122923,
+          "stars_delta_30d": null,
+          "open_issues": 2709,
+          "last_commit_days_ago": 0,
+          "forks": 43182,
+          "fetched_at": "2026-06-11T02:57:11.304190+00:00"
+        }
+      },
+      "trajectory": "stable"
     },
     {
       "id": "terraform",
@@ -142,7 +268,16 @@
       "since": "2024-03",
       "switching_cost": "medium",
       "notes": "IaC multi-cloud, alternative OpenTofu à considérer",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 48633,
+          "stars_delta_30d": null,
+          "open_issues": 1909,
+          "last_commit_days_ago": 0,
+          "forks": 10369,
+          "fetched_at": "2026-06-11T02:57:11.339498+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -164,7 +299,16 @@
       "since": "2024-01",
       "switching_cost": "medium",
       "notes": "Standard de facto pour les métriques, intégration Grafana",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 64431,
+          "stars_delta_30d": null,
+          "open_issues": 829,
+          "last_commit_days_ago": 0,
+          "forks": 10491,
+          "fetched_at": "2026-06-11T02:57:11.357135+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -175,7 +319,16 @@
       "since": "2024-01",
       "switching_cost": "medium",
       "notes": "Dashboards puissants, supporte Prometheus/Loki/Tempo",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 74338,
+          "stars_delta_30d": null,
+          "open_issues": 3642,
+          "last_commit_days_ago": 0,
+          "forks": 14049,
+          "fetched_at": "2026-06-11T02:57:11.392629+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -186,7 +339,16 @@
       "since": "2024-03",
       "switching_cost": "high",
       "notes": "IAM open-source, OAuth2/OIDC, SSO — alternative à Auth0",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 34839,
+          "stars_delta_30d": null,
+          "open_issues": 2806,
+          "last_commit_days_ago": 0,
+          "forks": 8461,
+          "fetched_at": "2026-06-11T02:57:11.410382+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -197,7 +359,16 @@
       "since": "2024-06",
       "switching_cost": "high",
       "notes": "Event streaming haute performance, complexité opérationnelle à évaluer",
-      "metrics": {},
+      "metrics": {
+        "github": {
+          "stars": 32776,
+          "stars_delta_30d": null,
+          "open_issues": 414,
+          "last_commit_days_ago": 0,
+          "forks": 15264,
+          "fetched_at": "2026-06-11T02:57:11.428659+00:00"
+        }
+      },
       "trajectory": "stable"
     },
     {
@@ -208,8 +379,17 @@
       "since": "2024-03",
       "switching_cost": "medium",
       "notes": "Standard émergent pour traces/métriques/logs, vendor-neutral",
-      "metrics": {},
-      "trajectory": "rising"
+      "metrics": {
+        "github": {
+          "stars": 7120,
+          "stars_delta_30d": null,
+          "open_issues": 699,
+          "last_commit_days_ago": 0,
+          "forks": 2101,
+          "fetched_at": "2026-06-11T02:57:11.446534+00:00"
+        }
+      },
+      "trajectory": "stable"
     },
     {
       "id": "ollama",
@@ -219,8 +399,22 @@
       "since": "2024-06",
       "switching_cost": "low",
       "notes": "LLMs locaux (Ollama) et API cloud (OpenAI) — écosystème en évolution rapide",
-      "metrics": {},
-      "trajectory": "rising"
+      "metrics": {
+        "github": {
+          "stars": 173807,
+          "stars_delta_30d": null,
+          "open_issues": 3382,
+          "last_commit_days_ago": 1,
+          "forks": 16547,
+          "fetched_at": "2026-06-11T02:57:11.481251+00:00"
+        },
+        "npm": {
+          "downloads_weekly": 24753917,
+          "downloads_delta_pct": null,
+          "fetched_at": "2026-06-11T02:57:11.498822+00:00"
+        }
+      },
+      "trajectory": "stable"
     }
   ]
 }

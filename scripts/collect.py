@@ -113,6 +113,9 @@ async def collect_technology(tech: dict, prev_tech: dict | None) -> dict:
         "since": tech.get("since"),
         "switching_cost": tech.get("switching_cost"),
         "notes": tech.get("notes"),
+        "pros": tech.get("pros", []),
+        "cons": tech.get("cons", []),
+        "use_cases": tech.get("use_cases", []),
         "metrics": metrics,
         "trajectory": trajectory,
     }

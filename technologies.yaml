@@ -1,4 +1,7 @@
 technologies:
+
+  # ── LANGUAGES ──────────────────────────────────────────────────────────────
+
   - id: typescript
     name: TypeScript
     category: languages
@@ -6,6 +9,18 @@ technologies:
     since: "2024-01"
     switching_cost: medium
     notes: "Standard de facto pour tout projet Node/web"
+    pros:
+      - "Typage statique = moins de bugs runtime"
+      - "Auto-complétion et refactoring fiables"
+      - "Compatible JS — migration progressive"
+    cons:
+      - "Build step supplémentaire"
+      - "Types complexes (generics imbriqués) verbose"
+      - "Fausse sécurité si any/as utilisés"
+    use_cases:
+      - "Tout projet Node.js ou frontend en équipe"
+      - "APIs GraphQL, NestJS, Next.js"
+      - "Librairies partagées nécessitant un contrat fort"
     sources:
       github: microsoft/TypeScript
       npm_package: typescript
@@ -17,6 +32,18 @@ technologies:
     since: "2024-01"
     switching_cost: high
     notes: "Langage backend mature, écosystème Spring solide"
+    pros:
+      - "JVM mature — performances prévisibles, tooling riche"
+      - "Typage fort + refactoring IDE de classe mondiale"
+      - "Écosystème Spring Boot / Quarkus très complet"
+    cons:
+      - "Verbosité comparée à Kotlin/Go"
+      - "Démarrage JVM lent (vs GraalVM native)"
+      - "Gestion mémoire heap à configurer en prod"
+    use_cases:
+      - "Microservices d'entreprise Spring Boot"
+      - "Applications Android (avec Kotlin en priorité)"
+      - "Systèmes haute disponibilité bancaires / assurance"
     sources:
       github: openjdk/jdk
 
@@ -27,9 +54,67 @@ technologies:
     since: "2024-01"
     switching_cost: medium
     notes: "Scripting, data, ML/AI — polyvalence maximale"
+    pros:
+      - "Productivité maximale, syntaxe lisible"
+      - "Écosystème ML/data science inégalé"
+      - "Scripts d'automatisation et glue code rapides"
+    cons:
+      - "GIL — pas de vrai parallélisme CPU"
+      - "Performances brutes faibles (PyPy/Cython pour critical path)"
+      - "Typage dynamique = bugs runtime sans mypy"
+    use_cases:
+      - "Data pipelines, ML / LLM fine-tuning"
+      - "Scripts DevOps, automatisation CI/CD"
+      - "APIs FastAPI / Django pour équipes data"
     sources:
       github: python/cpython
       pypi_package: pip
+
+  - id: go
+    name: Go
+    category: languages
+    position: trial
+    since: "2024-06"
+    switching_cost: medium
+    notes: "Langage de choix pour les outils cloud-native et microservices légers"
+    pros:
+      - "Goroutines légères — concurrence native et simple"
+      - "Compilation rapide, binaires statiques autonomes"
+      - "Performances proches du C sans gestion mémoire manuelle"
+    cons:
+      - "Gestion des erreurs verbose (if err != nil partout)"
+      - "Pas d'exceptions — patterns inhabituels pour les développeurs Java/JS"
+      - "Génériques arrivés tard (Go 1.18) — bibliothèques pas encore homogènes"
+    use_cases:
+      - "Microservices hautes performances (Kubernetes, Docker, Prometheus sont en Go)"
+      - "CLI tools et agents de collecte de métriques"
+      - "Proxies réseau, load balancers, edge services"
+    sources:
+      github: golang/go
+
+  - id: rust
+    name: Rust
+    category: languages
+    position: assess
+    since: "2024-09"
+    switching_cost: high
+    notes: "Sécurité mémoire sans GC — pertinent pour les couches critiques de performance"
+    pros:
+      - "Memory safety garantie à la compilation (borrow checker)"
+      - "Performances C++ sans garbage collector"
+      - "WebAssembly de premier ordre"
+    cons:
+      - "Courbe d'apprentissage très abrupte (borrow checker)"
+      - "Compilation lente sur les gros projets"
+      - "Moins de développeurs disponibles sur le marché"
+    use_cases:
+      - "Composants WebAssembly embarqués dans des apps web"
+      - "Outils CLI critiques remplaçant C/C++"
+      - "Couches réseau ou cryptographiques haute performance"
+    sources:
+      github: rust-lang/rust
+
+  # ── FRAMEWORKS FRONT ───────────────────────────────────────────────────────
 
   - id: react
     name: React
@@ -38,6 +123,18 @@ technologies:
     since: "2024-01"
     switching_cost: medium
     notes: "Dominant en production, écosystème Next.js solide"
+    pros:
+      - "Écosystème et communauté les plus larges"
+      - "React Server Components — full-stack natif avec Next.js"
+      - "Hooks + Context — state management flexible"
+    cons:
+      - "Bundle size si non optimisé"
+      - "JSX — courbe pour les nouveaux développeurs"
+      - "Choix de librairies à faire soi-même (pas opinionné)"
+    use_cases:
+      - "Applications web complexes en équipe"
+      - "Sites e-commerce / marketing avec Next.js (SSR/SSG)"
+      - "Dashboards et outils internes"
     sources:
       github: facebook/react
       npm_package: react
@@ -49,9 +146,92 @@ technologies:
     since: "2024-03"
     switching_cost: high
     notes: "Framework complet, pertinent pour grandes applications d'entreprise"
+    pros:
+      - "Framework full-featured opinionné — cohérence en équipe"
+      - "Injection de dépendances robuste, RxJS natif"
+      - "TypeScript en premier — aucune configuration"
+    cons:
+      - "Verbosité et boilerplate important"
+      - "Bundle initial lourd si non tree-shaken"
+      - "Courbe d'apprentissage élevée pour les débutants"
+    use_cases:
+      - "Applications d'entreprise avec équipes larges"
+      - "Portails internes nécessitant une architecture stricte"
+      - "Migration depuis AngularJS en contexte existant"
     sources:
       github: angular/angular
       npm_package: "@angular/core"
+
+  - id: vuejs
+    name: Vue.js
+    category: frameworks_front
+    position: trial
+    since: "2024-06"
+    switching_cost: medium
+    notes: "Alternative React plus accessible, Composition API élégante"
+    pros:
+      - "Courbe d'apprentissage douce — idéal pour onboarder des juniors"
+      - "Composition API — réutilisabilité de la logique"
+      - "Nuxt.js pour le SSR, intégration facile avec Laravel/Django"
+    cons:
+      - "Moins dominant qu'Angular en entreprise française"
+      - "Écosystème plus petit que React"
+      - "Deux paradigmes (Options API + Composition API) = confusion potentielle"
+    use_cases:
+      - "SPAs et dashboards avec équipes polyvalentes"
+      - "Applications PHP/Laravel avec composants interactifs"
+      - "Projets cherchant une alternative React plus progressive"
+    sources:
+      github: vuejs/core
+      npm_package: vue
+
+  - id: nextjs
+    name: Next.js
+    category: frameworks_front
+    position: adopt
+    since: "2024-03"
+    switching_cost: medium
+    notes: "Standard pour le SSR/SSG React — full-stack en un seul framework"
+    pros:
+      - "SSR, SSG, ISR en un seul framework sans config"
+      - "App Router — Server Components, streaming, layouts"
+      - "Optimisations images/fonts/scripts automatiques"
+    cons:
+      - "Vendor lock-in Vercel subtil (edge runtime, caching)"
+      - "App Router — complexité du cache difficile à déboguer"
+      - "Configuration avancée Webpack/Turbopack"
+    use_cases:
+      - "Sites e-commerce avec SEO critique"
+      - "Applications full-stack React sans backend séparé"
+      - "Portails marketing haute performance"
+    sources:
+      github: vercel/next.js
+      npm_package: next
+
+  - id: svelte
+    name: Svelte
+    category: frameworks_front
+    position: assess
+    since: "2024-09"
+    switching_cost: medium
+    notes: "Compilateur plutôt que runtime — bundle minimal, DX excellent"
+    pros:
+      - "Compilation à la build — pas de Virtual DOM en runtime"
+      - "Bundle final ultra-léger"
+      - "Syntaxe concise et réactive sans boilerplate"
+    cons:
+      - "Écosystème plus petit — moins de librairies tierces"
+      - "Moins de développeurs disponibles sur le marché"
+      - "SvelteKit encore en maturation pour les gros projets"
+    use_cases:
+      - "Widgets embarqués dans des apps existantes"
+      - "Applications légères où la taille du bundle est critique"
+      - "Projets expérimentaux ou applications internes à haute interactivité"
+    sources:
+      github: sveltejs/svelte
+      npm_package: svelte
+
+  # ── FRAMEWORKS BACK ────────────────────────────────────────────────────────
 
   - id: spring-boot
     name: Spring Boot
@@ -60,6 +240,18 @@ technologies:
     since: "2024-01"
     switching_cost: high
     notes: "Standard Java backend, auto-configuration, large écosystème"
+    pros:
+      - "Auto-configuration — zéro XML, prêt en quelques minutes"
+      - "Écosystème Spring (Security, Data, Cloud) très complet"
+      - "Production-ready : Actuator, metrics, health checks"
+    cons:
+      - "Démarrage lent (JVM) — améliorer avec GraalVM native"
+      - "Consommation mémoire élevée par défaut"
+      - "Magie Spring — debug complexe pour les non-experts"
+    use_cases:
+      - "Microservices d'entreprise Java"
+      - "APIs REST / GraphQL avec Spring Data JPA"
+      - "Services d'authentification avec Spring Security + Keycloak"
     sources:
       github: spring-projects/spring-boot
 
@@ -70,9 +262,91 @@ technologies:
     since: "2024-03"
     switching_cost: medium
     notes: "Architecture modulaire Node.js, TypeScript natif"
+    pros:
+      - "Architecture Angular-like — familière pour les équipes front"
+      - "TypeScript natif, décorateurs, injection de dépendances"
+      - "Adapters Fastify / Express, WebSockets, gRPC out-of-the-box"
+    cons:
+      - "Overhead de décorateurs — verbose pour des APIs simples"
+      - "Performances inférieures à Go/Rust pour le CPU-bound"
+      - "Certains patterns Angular trop lourds pour des microservices"
+    use_cases:
+      - "APIs REST/GraphQL TypeScript en équipe full-stack"
+      - "BFF (Backend For Frontend) dans un monorepo"
+      - "Microservices Node.js nécessitant une architecture rigoureuse"
     sources:
       github: nestjs/nest
       npm_package: "@nestjs/core"
+
+  - id: fastapi
+    name: FastAPI
+    category: frameworks_back
+    position: adopt
+    since: "2024-03"
+    switching_cost: low
+    notes: "Référence Python async — OpenAPI auto-généré, Pydantic natif"
+    pros:
+      - "OpenAPI / Swagger auto-généré à partir des types"
+      - "Pydantic v2 — validation ultra-rapide"
+      - "Async natif — performances comparables à Node.js"
+    cons:
+      - "Moins adapté aux grosses applications monolithiques"
+      - "Gestion sessions / auth à assembler soi-même"
+      - "Async peut complexifier le debug en cas d'erreur"
+    use_cases:
+      - "APIs ML/data science exposant des modèles Python"
+      - "Microservices Python haute performance"
+      - "Prototypes rapides avec documentation API gratuite"
+    sources:
+      github: fastapi/fastapi
+      pypi_package: fastapi
+
+  - id: quarkus
+    name: Quarkus
+    category: frameworks_back
+    position: trial
+    since: "2024-06"
+    switching_cost: high
+    notes: "Java cloud-native — démarrage sub-seconde avec GraalVM native image"
+    pros:
+      - "Démarrage ultra-rapide (~10ms en mode native)"
+      - "Empreinte mémoire minimale — idéal pour K8s / Serverless"
+      - "Dev mode avec hot reload et Live Coding"
+    cons:
+      - "Compilation native GraalVM longue (5-15 min)"
+      - "Extensions pas toutes aussi stables que Spring"
+      - "Courbe d'apprentissage pour les équipes Spring habituées"
+    use_cases:
+      - "Microservices Java containerisés à scalabilité rapide"
+      - "Fonctions serverless (AWS Lambda, Azure Functions)"
+      - "Remplacement de Spring Boot là où le cold start est critique"
+    sources:
+      github: quarkusio/quarkus
+
+  - id: expressjs
+    name: Express.js
+    category: frameworks_back
+    position: adopt
+    since: "2024-01"
+    switching_cost: low
+    notes: "Framework Node.js minimaliste — référence pour les APIs simples"
+    pros:
+      - "Minimaliste et flexible — aucun avis imposé"
+      - "Écosystème middleware npm immense"
+      - "Apprentissage en quelques heures"
+    cons:
+      - "Pas opinionné — incohérence architecturale en équipe"
+      - "Maintenance ralentie (dernière version majeure en 2014)"
+      - "Callback hell sans async/await explicite"
+    use_cases:
+      - "APIs REST simples et BFF légers"
+      - "Prototypes Node.js rapides"
+      - "Middleware servers et reverse proxies custom"
+    sources:
+      github: expressjs/express
+      npm_package: express
+
+  # ── MOBILE ─────────────────────────────────────────────────────────────────
 
   - id: flutter
     name: Flutter
@@ -81,8 +355,113 @@ technologies:
     since: "2024-01"
     switching_cost: high
     notes: "Cross-platform iOS/Android/Web avec une seule codebase Dart"
+    pros:
+      - "UI 100% custom — pixel-perfect sur toutes les plateformes"
+      - "Hot reload ultra-rapide en développement"
+      - "Performance native via compilation AOT"
+    cons:
+      - "Dart — langage à apprendre, pool de développeurs limité"
+      - "Bundle size plus lourd qu'une app native"
+      - "Accès aux APIs platform-specific nécessite des plugins"
+    use_cases:
+      - "Applications mobiles cross-platform avec UI riche"
+      - "Apps avec design system fortement customisé"
+      - "Équipes cherchant iOS + Android + Web depuis un seul repo"
     sources:
       github: flutter/flutter
+
+  - id: react-native
+    name: React Native
+    category: mobile
+    position: trial
+    since: "2024-06"
+    switching_cost: high
+    notes: "Mobile cross-platform pour équipes React — partage de code web/mobile"
+    pros:
+      - "Partage de logique avec les apps React web"
+      - "Large communauté, Expo simplifie le setup"
+      - "Rendu natif (pas WebView)"
+    cons:
+      - "Performances inférieures à Flutter sur les UIs complexes"
+      - "Bridge natif — debug parfois ardu"
+      - "Dépendances aux librairies natives à maintenir"
+    use_cases:
+      - "Apps mobiles pour équipes React souhaitant partager du code"
+      - "Applications grand public avec composants natifs standard"
+      - "Projets avec budget limité nécessitant iOS + Android"
+    sources:
+      github: facebook/react-native
+      npm_package: react-native
+
+  - id: kotlin-multiplatform
+    name: Kotlin Multiplatform
+    category: mobile
+    position: assess
+    since: "2024-06"
+    switching_cost: high
+    notes: "Partage de la logique business entre Android et iOS — UI reste native"
+    pros:
+      - "UI native sur chaque plateforme (pas de compromis)"
+      - "Partage de la logique business, networking, storage"
+      - "Interop Java 100% — réutilisation du code backend"
+    cons:
+      - "Tooling encore en maturation"
+      - "Compose Multiplatform (UI) encore instable"
+      - "Peu de développeurs iOS maîtrisant Kotlin"
+    use_cases:
+      - "Applications Android-first cherchant à partager la logique iOS"
+      - "Équipes backend Kotlin voulant toucher au mobile"
+      - "Applications B2B avec UI spécifiques par plateforme"
+    sources:
+      github: JetBrains/kotlin
+
+  - id: capacitor
+    name: Capacitor
+    category: mobile
+    position: assess
+    since: "2024-09"
+    switching_cost: low
+    notes: "Wrapper natif pour apps web — déploiement sur stores depuis une PWA"
+    pros:
+      - "Compatible avec n'importe quel framework JS (React, Vue, Angular)"
+      - "Accès aux APIs natives (camera, GPS, push notifications)"
+      - "Transition PWA → App Store sans réécriture"
+    cons:
+      - "Performances WebView — pas adapté aux jeux ou UIs animées"
+      - "Expérience utilisateur moins fluide qu'une app native"
+      - "Plugins parfois mal maintenus"
+    use_cases:
+      - "Migration d'une PWA vers les stores iOS/Android"
+      - "Applications B2B internes à distribution rapide"
+      - "Prototypes mobiles depuis une base web existante"
+    sources:
+      github: ionic-team/capacitor
+      npm_package: "@capacitor/core"
+
+  - id: ionic
+    name: Ionic
+    category: mobile
+    position: hold
+    since: "2024-06"
+    switching_cost: medium
+    notes: "UI components hybrides — pertinence en recul face à Flutter et React Native"
+    pros:
+      - "Bibliothèque de composants UI riches"
+      - "Compatible Angular, React et Vue"
+      - "Capacitor intégré pour le packaging natif"
+    cons:
+      - "Performances inférieures aux solutions natives"
+      - "Pertinence en déclin — Flutter et React Native dominent"
+      - "WebView — expérience utilisateur parfois dégradée"
+    use_cases:
+      - "Maintenance d'applications Ionic existantes"
+      - "Applications B2B internes avec équipes Angular"
+      - "Éviter pour les nouveaux projets — préférer Flutter ou React Native"
+    sources:
+      github: ionic-team/ionic-framework
+      npm_package: "@ionic/core"
+
+  # ── DATABASES ──────────────────────────────────────────────────────────────
 
   - id: postgresql
     name: PostgreSQL
@@ -91,6 +470,18 @@ technologies:
     since: "2024-01"
     switching_cost: high
     notes: "SGBDR de référence, JSON natif, fiabilité éprouvée"
+    pros:
+      - "ACID complet, transactions multi-tables fiables"
+      - "JSONB natif — hybride relationnel / document"
+      - "Extensions (PostGIS, pgvector, TimescaleDB)"
+    cons:
+      - "Scalabilité horizontale en écriture complexe (Citus, Patroni)"
+      - "Administration et tuning nécessitent de l'expertise"
+      - "Pas conçu pour du analytique OLAP pur"
+    use_cases:
+      - "Base de données principale de toute application web"
+      - "Données géospatiales avec PostGIS"
+      - "Vecteurs AI/ML avec pgvector"
     sources:
       github: postgres/postgres
 
@@ -101,8 +492,88 @@ technologies:
     since: "2024-01"
     switching_cost: medium
     notes: "Cache in-memory, pub/sub, sessions — indispensable en production"
+    pros:
+      - "Latence sub-milliseconde — cache applicatif de référence"
+      - "Structures de données riches (sorted sets, streams, HLL)"
+      - "Pub/Sub et Redis Streams pour l'event-driven"
+    cons:
+      - "Données en RAM — coût mémoire"
+      - "Modèle de données limité (pas de requêtes complexes)"
+      - "Persistance optionnelle — pas une source de vérité primaire"
+    use_cases:
+      - "Cache de sessions et tokens JWT"
+      - "Rate limiting et compteurs distribués"
+      - "Queues de tâches avec BullMQ / Celery"
     sources:
       github: redis/redis
+
+  - id: mongodb
+    name: MongoDB
+    category: databases
+    position: trial
+    since: "2024-06"
+    switching_cost: medium
+    notes: "Base documentaire flexible — pertinente pour les schémas évolutifs"
+    pros:
+      - "Schéma flexible — idéal pour les données non-structurées"
+      - "Scalabilité horizontale native (sharding)"
+      - "Requêtes JSON naturelles, agrégation puissante"
+    cons:
+      - "Risque d'anarchie du schéma sans Mongoose / validation"
+      - "Jointures coûteuses (lookup) — prévoir la dénormalisation"
+      - "Transactions multi-documents plus récentes et moins matures"
+    use_cases:
+      - "Catalogues produits avec attributs variables"
+      - "CMS et contenus avec structure hétérogène"
+      - "Logs applicatifs et données time-series légères"
+    sources:
+      github: mongodb/mongo
+
+  - id: elasticsearch
+    name: Elasticsearch
+    category: databases
+    position: trial
+    since: "2024-06"
+    switching_cost: high
+    notes: "Moteur de recherche full-text + analytics — cœur de la stack ELK"
+    pros:
+      - "Recherche full-text ultra-rapide avec scoring de pertinence"
+      - "Agrégations puissantes pour l'analytique temps réel"
+      - "Kibana pour la visualisation des logs"
+    cons:
+      - "Consommation mémoire et CPU élevée"
+      - "Cohérence éventuelle — pas adapté aux données transactionnelles"
+      - "Opérations en prod complexes (sharding, réindex)"
+    use_cases:
+      - "Moteurs de recherche applicatifs avec pertinence"
+      - "Centralisation et analyse des logs (stack ELK)"
+      - "Recherche sémantique avec vecteurs dense (kNN)"
+    sources:
+      github: elastic/elasticsearch
+
+  - id: clickhouse
+    name: ClickHouse
+    category: databases
+    position: assess
+    since: "2024-09"
+    switching_cost: medium
+    notes: "Base OLAP colonnes ultra-rapide — analytics temps réel sur milliards de lignes"
+    pros:
+      - "Performances analytiques 100x supérieures à PostgreSQL sur agrégats"
+      - "Compression colonnes excellente — stockage réduit"
+      - "SQL familier avec extensions analytiques"
+    cons:
+      - "Pas conçu pour l'OLTP — UPDATE/DELETE coûteux"
+      - "Opérations en prod spécialisées"
+      - "Jointures moins performantes que les bases row-oriented"
+    use_cases:
+      - "Analytics produit temps réel (clics, conversions)"
+      - "Dashboards BI sur des milliards d'événements"
+      - "Métriques et séries temporelles haute fréquence"
+    sources:
+      github: ClickHouse/ClickHouse
+
+  # ── DEVOPS ─────────────────────────────────────────────────────────────────
 
   - id: docker
     name: Docker
@@ -111,6 +582,18 @@ technologies:
     since: "2024-01"
     switching_cost: low
     notes: "Conteneurisation standard, reproductibilité des environnements"
+    pros:
+      - "Build once, run anywhere — reproductibilité totale"
+      - "Isolation des dépendances, multi-stage builds"
+      - "Docker Compose pour les environnements de développement locaux"
+    cons:
+      - "Overhead réseau/stockage vs processus natifs"
+      - "Images non-optimisées = sécurité et taille problématiques"
+      - "Rootless et daemon non activés par défaut"
+    use_cases:
+      - "Environnements de développement reproductibles"
+      - "Build d'artefacts CI/CD déterministes"
+      - "Packaging d'applications pour Kubernetes"
     sources:
       github: docker/cli
 
@@ -121,6 +604,18 @@ technologies:
     since: "2024-03"
     switching_cost: high
     notes: "Justifié dès 5+ services. K3s pour environnements légers."
+    pros:
+      - "Orchestration déclarative — self-healing, auto-scaling"
+      - "Standard industrie — talent disponible"
+      - "Écosystème CNCF très riche"
+    cons:
+      - "Complexité opérationnelle élevée — overkill < 5 services"
+      - "Courbe d'apprentissage longue (RBAC, networking, storage)"
+      - "Coût infra : minimum 3 nœuds pour HA"
+    use_cases:
+      - "Plateformes microservices en production"
+      - "Scalabilité automatique à la demande (HPA)"
+      - "Multi-tenancy avec namespaces et RBAC"
     sources:
       github: kubernetes/kubernetes
       cncf: true
@@ -132,6 +627,18 @@ technologies:
     since: "2024-03"
     switching_cost: medium
     notes: "IaC multi-cloud, alternative OpenTofu à considérer"
+    pros:
+      - "IaC déclaratif multi-cloud (AWS, GCP, Azure, k8s)"
+      - "Plan / Apply — preview des changements avant exécution"
+      - "Registre de modules communautaire riche"
+    cons:
+      - "State file — source de conflits en équipe sans remote backend"
+      - "Licence BSL depuis Hashicorp — alternative : OpenTofu"
+      - "Drift infra difficile à détecter sans CI dédié"
+    use_cases:
+      - "Provisionnement d'infrastructure cloud reproductible"
+      - "Multi-environnements (dev/staging/prod) identiques"
+      - "Gestion DNS, certificats, VPCs depuis le code"
     sources:
       github: hashicorp/terraform
 
@@ -142,7 +649,44 @@ technologies:
     since: "2024-01"
     switching_cost: medium
     notes: "CI/CD natif GitHub, marketplace d'actions riche"
+    pros:
+      - "Intégration GitHub native — zéro configuration initiale"
+      - "Marketplace d'actions (checkout, deploy, lint, etc.)"
+      - "Matrix builds — test sur N versions/OS en parallèle"
+    cons:
+      - "Vendor lock-in GitHub"
+      - "Debug difficile (pas de SSH easy sur runner)"
+      - "Minutes payantes sur les repos privés au-delà du quota"
+    use_cases:
+      - "CI/CD complet depuis le repo GitHub"
+      - "Automatisation de tâches récurrentes (cron jobs)"
+      - "Déploiement sur GitHub Pages, AWS, GCP, Azure"
     sources: {}
+
+  - id: argocd
+    name: ArgoCD
+    category: devops
+    position: trial
+    since: "2024-06"
+    switching_cost: medium
+    notes: "GitOps pour Kubernetes — le repo Git est la source de vérité des déploiements"
+    pros:
+      - "GitOps natif — rollback = revert Git"
+      - "UI claire avec visualisation de l'état de sync"
+      - "Multi-clusters, RBAC fin, ApplicationSets"
+    cons:
+      - "Prérequis : maîtrise Kubernetes"
+      - "Gestion des secrets séparée (Sealed Secrets ou Vault)"
+      - "Courbe de configuration initiale non négligeable"
+    use_cases:
+      - "Déploiements Kubernetes en GitOps"
+      - "Continuous delivery multi-environnements"
+      - "Audit trail des déploiements via Git history"
+    sources:
+      github: argoproj/argo-cd
+      cncf: true
+
+  # ── OBSERVABILITY ──────────────────────────────────────────────────────────
 
   - id: prometheus
     name: Prometheus
@@ -151,6 +695,18 @@ technologies:
     since: "2024-01"
     switching_cost: medium
     notes: "Standard de facto pour les métriques, intégration Grafana"
+    pros:
+      - "Pull model — simple à intégrer dans Kubernetes"
+      - "PromQL — langage de requêtes expressif pour les métriques"
+      - "Écosystème d'exporters très riche"
+    cons:
+      - "Pas conçu pour les logs ou les traces"
+      - "Rétention limitée — nécessite Thanos ou Cortex pour le long terme"
+      - "Haute disponibilité native inexistante"
+    use_cases:
+      - "Métriques applicatives (RED: Rate, Errors, Duration)"
+      - "Alerting avec AlertManager"
+      - "SLO / SLA monitoring en production"
     sources:
       github: prometheus/prometheus
       cncf: true
@@ -162,8 +718,90 @@ technologies:
     since: "2024-01"
     switching_cost: medium
     notes: "Dashboards puissants, supporte Prometheus/Loki/Tempo"
+    pros:
+      - "Datasources multiples (Prometheus, Loki, ClickHouse, etc.)"
+      - "Dashboards partagés et versionnés en JSON/code"
+      - "Alerting unifié toutes sources"
+    cons:
+      - "Configuration de dashboards complexes chronophage"
+      - "Grafana Cloud payant au-delà du free tier"
+      - "Grafana Tempo (tracing) moins mature que Jaeger"
+    use_cases:
+      - "Dashboards opérationnels et métier unifiés"
+      - "Oncall — dashboards de garde liés aux alertes"
+      - "Stack complète LGTM : Loki + Grafana + Tempo + Mimir"
     sources:
       github: grafana/grafana
+
+  - id: opentelemetry
+    name: OpenTelemetry
+    category: observability
+    position: trial
+    since: "2024-03"
+    switching_cost: medium
+    notes: "Standard émergent pour traces/métriques/logs — vendor-neutral"
+    pros:
+      - "Vendor-neutral — pas de lock-in Datadog / Dynatrace"
+      - "Auto-instrumentation — zéro code pour les frameworks standards"
+      - "Unifie traces, métriques et logs dans un seul SDK"
+    cons:
+      - "Stabilité variable selon les langages (Python encore en beta pour logs)"
+      - "Collector à opérer — un composant de plus"
+      - "Documentation encore fragmentée"
+    use_cases:
+      - "Observabilité distribuée sans vendor lock-in"
+      - "Migration de Jaeger/Zipkin vers un standard ouvert"
+      - "Instrumentation automatique des microservices Spring / Node.js"
+    sources:
+      github: open-telemetry/opentelemetry-collector
+      cncf: true
+
+  - id: loki
+    name: Grafana Loki
+    category: observability
+    position: trial
+    since: "2024-06"
+    switching_cost: medium
+    notes: "Centralisation des logs K8s bon marché — intégration Grafana native"
+    pros:
+      - "Stockage économique — indexe les labels, pas le contenu"
+      - "Intégration Grafana native — stack LGTM unifiée"
+      - "LogQL proche de PromQL — apprentissage rapide"
+    cons:
+      - "Pas de recherche full-text — requêtes sans labels bien définis lentes"
+      - "Moins puissant qu'Elasticsearch pour l'analytique complexe"
+      - "Requêtes longues sur de grands volumes sans partitionnement"
+    use_cases:
+      - "Centralisation des logs Kubernetes"
+      - "Stack Grafana unifiée (Loki + Prometheus + Tempo)"
+      - "Debug applicatif corrélé aux métriques dans Grafana"
+    sources:
+      github: grafana/loki
+
+  - id: jaeger
+    name: Jaeger
+    category: observability
+    position: adopt
+    since: "2024-03"
+    switching_cost: medium
+    notes: "Tracing distribué CNCF graduated — visualisation des call graphs microservices"
+    pros:
+      - "CNCF graduated — standard éprouvé pour le tracing distribué"
+      - "Visualisation des flamegraphs et call graphs"
+      - "Compatible OpenTelemetry nativement"
+    cons:
+      - "Stockage des traces coûteux en volume"
+      - "Sampling à configurer soigneusement (100% = coûteux)"
+      - "UI fonctionnelle mais moins riche que les solutions cloud"
+    use_cases:
+      - "Debug des latences dans les chaînes microservices"
+      - "Root cause analysis sur des erreurs distribuées"
+      - "Analyse de la propagation des requêtes end-to-end"
+    sources:
+      github: jaegertracing/jaeger
+      cncf: true
+
+  # ── SECURITY ───────────────────────────────────────────────────────────────
 
   - id: keycloak
     name: Keycloak
@@ -171,9 +809,112 @@ technologies:
     position: trial
     since: "2024-03"
     switching_cost: high
-    notes: "IAM open-source, OAuth2/OIDC, SSO — alternative à Auth0"
+    notes: "IAM open-source, OAuth2/OIDC, SSO — alternative souveraine à Auth0"
+    pros:
+      - "IAM complet : OAuth2, OIDC, SAML, SSO, MFA"
+      - "Open-source — aucun coût de licence, hébergement maîtrisé"
+      - "Admin UI et API de gestion complètes"
+    cons:
+      - "Complexité opérationnelle — HA non trivial"
+      - "Configuration avancée nécessite expertise"
+      - "Upgrade versions parfois cassants"
+    use_cases:
+      - "SSO multi-applications en entreprise"
+      - "Authentification microservices avec JWT"
+      - "Alternative RGPD à Auth0 / Okta"
     sources:
       github: keycloak/keycloak
+
+  - id: vault
+    name: HashiCorp Vault
+    category: security
+    position: trial
+    since: "2024-06"
+    switching_cost: high
+    notes: "Gestion centralisée des secrets — rotation automatique, audit complet"
+    pros:
+      - "Secrets dynamiques (DB, cloud) — rotation automatique"
+      - "Audit log complet de tous les accès aux secrets"
+      - "Intégration Kubernetes native (Vault Agent Injector)"
+    cons:
+      - "Complexité opérationnelle — HA, unsealing, backup critique"
+      - "Licence BSL pour les fonctionnalités enterprise"
+      - "Single point of failure si mal configuré"
+    use_cases:
+      - "Centralisation de tous les secrets d'infrastructure"
+      - "Credentials dynamiques DB sans mot de passe statique"
+      - "PKI interne et gestion des certificats"
+    sources:
+      github: hashicorp/vault
+
+  - id: trivy
+    name: Trivy
+    category: security
+    position: adopt
+    since: "2024-03"
+    switching_cost: low
+    notes: "Scanner de sécurité polyvalent — images, code, IaC, K8s"
+    pros:
+      - "Scanner universel : images Docker, filesystem, Git, K8s, IaC"
+      - "Rapide, intégration CI en une ligne"
+      - "Gratuit, open-source, CVE DB auto-mise à jour"
+    cons:
+      - "Faux positifs sur les CVEs sans fix disponible"
+      - "Remédiation manuelle — ne corrige pas automatiquement"
+      - "Résultats à contextualiser (sévérité vs exploitabilité réelle)"
+    use_cases:
+      - "Scan des images Docker à chaque build CI"
+      - "Audit IaC Terraform avant apply"
+      - "Compliance Kubernetes (CIS Benchmarks)"
+    sources:
+      github: aquasecurity/trivy
+
+  - id: snyk
+    name: Snyk
+    category: security
+    position: assess
+    since: "2024-09"
+    switching_cost: low
+    notes: "Sécurité des dépendances avec fix automatiques proposés"
+    pros:
+      - "Intégration IDE + GitHub PR + CI"
+      - "Fix automatiques proposés dans les PRs"
+      - "Base CVE contextualisée avec priorité"
+    cons:
+      - "Version gratuite limitée en scans/mois"
+      - "Pricing entreprise élevé"
+      - "Télémétrie et dépendance à un service cloud tiers"
+    use_cases:
+      - "Scan des dépendances npm/pip en CI"
+      - "Audit des images Docker avec fix guidés"
+      - "Monitoring continu des CVEs en production"
+    sources:
+      github: snyk/snyk
+      npm_package: snyk
+
+  - id: owasp-zap
+    name: OWASP ZAP
+    category: security
+    position: assess
+    since: "2024-09"
+    switching_cost: low
+    notes: "Scanner DAST open-source — tests de pénétration automatisés OWASP Top 10"
+    pros:
+      - "Gratuit et open-source — référence OWASP"
+      - "Automatisable en CI (ZAP Baseline Scan)"
+      - "API REST pour intégration dans les pipelines"
+    cons:
+      - "Interface graphique datée"
+      - "Taux de faux positifs élevé sans tuning"
+      - "Lent sur les grandes applications"
+    use_cases:
+      - "Tests DAST automatisés en staging avant release"
+      - "Audit des APIs REST contre l'OWASP Top 10"
+      - "Scans de sécurité dans le pipeline CI/CD"
+    sources:
+      github: zaproxy/zaproxy
+
+  # ── MESSAGING ──────────────────────────────────────────────────────────────
 
   - id: kafka
     name: Apache Kafka
@@ -182,27 +923,226 @@ technologies:
     since: "2024-06"
     switching_cost: high
     notes: "Event streaming haute performance, complexité opérationnelle à évaluer"
+    pros:
+      - "Débit massif — millions d'événements/seconde"
+      - "Rétention configurable — replay des événements"
+      - "Event sourcing et CQRS natifs"
+    cons:
+      - "Complexité opérationnelle élevée (ZooKeeper/KRaft, partition tuning)"
+      - "Overkill pour des systèmes < 10k messages/s"
+      - "Consumer groups et offsets à gérer soigneusement"
+    use_cases:
+      - "Event streaming inter-microservices à grande échelle"
+      - "Ingestion de données temps réel (logs, IoT, analytics)"
+      - "Event sourcing avec replay d'historique"
     sources:
       github: apache/kafka
 
-  - id: opentelemetry
-    name: OpenTelemetry
-    category: observability
-    position: trial
-    since: "2024-03"
+  - id: rabbitmq
+    name: RabbitMQ
+    category: messaging
+    position: adopt
+    since: "2024-01"
     switching_cost: medium
-    notes: "Standard émergent pour traces/métriques/logs, vendor-neutral"
+    notes: "Broker de messages AMQP mature — référence pour les queues de tâches"
+    pros:
+      - "Protocole AMQP mature et éprouvé"
+      - "Routing flexible (direct, topic, fanout, headers)"
+      - "Management UI claire, DLQ (Dead Letter Queue) natif"
+    cons:
+      - "Pas conçu pour le replay d'événements (contrairement à Kafka)"
+      - "Scalabilité limitée à très haut volume"
+      - "Complexité des exchanges et bindings pour les débutants"
+    use_cases:
+      - "Queues de tâches asynchrones (envoi d'emails, notifications)"
+      - "RPC asynchrone entre microservices"
+      - "Découplage de services sans besoin de replay"
     sources:
-      github: open-telemetry/opentelemetry-collector
+      github: rabbitmq/rabbitmq-server
+
+  - id: nats
+    name: NATS
+    category: messaging
+    position: trial
+    since: "2024-06"
+    switching_cost: medium
+    notes: "Messagerie ultra-légère haute performance — pub/sub, queue groups, JetStream"
+    pros:
+      - "Ultra-léger (<20 MB) et latence sub-milliseconde"
+      - "Pub/Sub + Queue Groups + Streaming (JetStream) en un seul système"
+      - "Multi-cloud et edge natif — CNCF incubating"
+    cons:
+      - "JetStream (persistance) encore moins mature que Kafka"
+      - "Communauté plus petite — moins de ressources"
+      - "Moins d'outillage que RabbitMQ ou Kafka"
+    use_cases:
+      - "Microservices nécessitant une latence minimale"
+      - "IoT et edge computing"
+      - "Remplaçant léger de Redis Pub/Sub"
+    sources:
+      github: nats-io/nats-server
       cncf: true
 
+  - id: grpc
+    name: gRPC
+    category: messaging
+    position: adopt
+    since: "2024-01"
+    switching_cost: medium
+    notes: "Communication inter-services haute performance avec contrat Protobuf fort"
+    pros:
+      - "Contrat Protobuf fort — breaking changes détectés à la compilation"
+      - "Streaming bidirectionnel natif"
+      - "Multi-langage — un seul .proto pour tous les clients"
+    cons:
+      - "Debug difficile (binaire Protobuf — pas lisible via curl)"
+      - "Courbe d'apprentissage Protobuf et génération de code"
+      - "Moins adapté aux APIs publiques (REST/OpenAPI plus accessibles)"
+    use_cases:
+      - "Communication interne entre microservices"
+      - "APIs haute performance avec streaming"
+      - "BFF mobile (protocole compact sur réseau mobile)"
+    sources:
+      github: grpc/grpc
+      npm_package: "@grpc/grpc-js"
+
+  - id: pulsar
+    name: Apache Pulsar
+    category: messaging
+    position: assess
+    since: "2024-09"
+    switching_cost: high
+    notes: "Alternative Kafka avec séparation compute/storage et multi-tenancy native"
+    pros:
+      - "Séparation compute (broker) / storage (BookKeeper) — scalabilité indépendante"
+      - "Multi-tenancy native — namespaces et quotas par tenant"
+      - "Geo-replication intégrée"
+    cons:
+      - "Complexité opérationnelle très élevée (ZooKeeper + BookKeeper + Brokers)"
+      - "Écosystème plus petit que Kafka"
+      - "Moins de talent disponible sur le marché"
+    use_cases:
+      - "Plateformes multi-tenant nécessitant l'isolation"
+      - "Event streaming avec geo-replication transparente"
+      - "Évaluation comme alternative Kafka pour les nouveaux projets"
+    sources:
+      github: apache/pulsar
+      cncf: true
+
+  # ── AI ─────────────────────────────────────────────────────────────────────
+
   - id: ollama
-    name: Ollama / OpenAI
+    name: Ollama / OpenAI SDK
     category: ai
     position: assess
     since: "2024-06"
     switching_cost: low
     notes: "LLMs locaux (Ollama) et API cloud (OpenAI) — écosystème en évolution rapide"
+    pros:
+      - "OpenAI API — standard de facto, compatible avec la plupart des LLMs"
+      - "Ollama — exécution locale, zéro coût, RGPD"
+      - "Prototypage d'applications LLM en quelques lignes"
+    cons:
+      - "Coûts API cloud peuvent exploser sans monitoring"
+      - "Hallucinations — ne pas utiliser pour des données critiques sans validation"
+      - "Évolution rapide — APIs et modèles changent fréquemment"
+    use_cases:
+      - "Génération de contenu et assistants conversationnels"
+      - "Extraction d'informations structurées depuis du texte"
+      - "Code review et génération de code assistée"
     sources:
       github: ollama/ollama
       npm_package: openai
+
+  - id: langchain
+    name: LangChain
+    category: ai
+    position: trial
+    since: "2024-06"
+    switching_cost: medium
+    notes: "Framework d'orchestration LLM — RAG, agents et chaînes de prompts"
+    pros:
+      - "Abstractions LLM universelles — swap de provider en une ligne"
+      - "RAG et agents prêts à l'emploi"
+      - "LangSmith pour le debug et monitoring des chaînes"
+    cons:
+      - "Abstraction parfois trop lourde — debug complexe"
+      - "Breaking changes fréquents entre versions majeures"
+      - "Peut être remplacé par du code direct pour les cas simples"
+    use_cases:
+      - "Applications RAG (Question/Réponse sur documents)"
+      - "Agents autonomes multi-steps"
+      - "Pipelines de traitement LLM complexes"
+    sources:
+      github: langchain-ai/langchain
+      pypi_package: langchain
+      npm_package: langchain
+
+  - id: huggingface
+    name: Hugging Face Transformers
+    category: ai
+    position: trial
+    since: "2024-06"
+    switching_cost: medium
+    notes: "Hub de modèles ML open-source — fine-tuning et inférence locale"
+    pros:
+      - "Accès à tous les modèles open-source (Llama, Mistral, Falcon, etc.)"
+      - "Fine-tuning simplifié avec PEFT / LoRA"
+      - "Hub communautaire — datasets et modèles partagés"
+    cons:
+      - "GPU nécessaire pour les grands modèles"
+      - "Dépendances lourdes (PyTorch, CUDA)"
+      - "Inférence CPU lente sur les modèles > 7B paramètres"
+    use_cases:
+      - "Fine-tuning de modèles sur des données métier"
+      - "NLP : classification, extraction, résumé"
+      - "Déploiement de modèles open-source on-premise"
+    sources:
+      github: huggingface/transformers
+      pypi_package: transformers
+
+  - id: mistral-ai
+    name: Mistral AI
+    category: ai
+    position: assess
+    since: "2024-09"
+    switching_cost: low
+    notes: "LLMs européens — excellent rapport performance/coût, API compatible OpenAI"
+    pros:
+      - "Hébergement européen — conformité RGPD facilitée"
+      - "Excellent rapport performance/coût (Mistral Small, Large)"
+      - "API compatible OpenAI — migration sans réécriture"
+    cons:
+      - "Moins de modèles spécialisés qu'OpenAI"
+      - "Communauté et écosystème plus jeunes"
+      - "Mixtral (open weights) nécessite une infrastructure GPU"
+    use_cases:
+      - "Alternative OpenAI souveraine pour les données sensibles"
+      - "LLM on-premise avec Mixtral 8x7B"
+      - "Applications nécessitant une conformité RGPD stricte"
+    sources:
+      github: mistralai/mistral-src
+      npm_package: "@mistralai/mistralai"
+
+  - id: llamaindex
+    name: LlamaIndex
+    category: ai
+    position: assess
+    since: "2024-09"
+    switching_cost: medium
+    notes: "Framework spécialisé RAG — indexation et interrogation de bases de connaissances"
+    pros:
+      - "Spécialisé RAG — connecteurs pour PDF, Notion, bases de données"
+      - "Orchestration avancée pour les pipelines d'ingestion"
+      - "LlamaCloud pour le déploiement managé"
+    cons:
+      - "Overlap avec LangChain — choix difficile"
+      - "API en évolution rapide — migration entre versions"
+      - "Documentation moins mature que LangChain"
+    use_cases:
+      - "Bases de connaissances augmentées (Q&A sur documents internes)"
+      - "RAG production-grade avec sources hétérogènes"
+      - "Agents d'analyse documentaire"
+    sources:
+      github: run-llama/llama_index
+      pypi_package: llama-index

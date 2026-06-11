@@ -1,0 +1,220 @@
+/* =====================================================
+   Tech Radar — Styles partagés
+   ===================================================== */
+
+:root {
+  --color-adopt: #1D9E75;
+  --color-trial: #185FA5;
+  --color-assess: #BA7517;
+  --color-hold: #A32D2D;
+  --color-rising: #1D9E75;
+  --color-stable: #6b7280;
+  --color-declining: #A32D2D;
+
+  --bg: #0f1117;
+  --bg-card: #1a1d27;
+  --bg-card-hover: #21253a;
+  --border: #2d3148;
+  --text: #e2e8f0;
+  --text-muted: #8892a4;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 52px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .brand {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: background 0.15s, color 0.15s;
+}
+
+nav a:hover, nav a.active {
+  background: #2d3148;
+  color: var(--text);
+}
+
+nav .spacer { flex: 1; }
+
+nav .last-update {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ---------- Page layout ---------- */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+/* ---------- Badges ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-adopt  { background: rgba(29,158,117,.18); color: var(--color-adopt);  border: 1px solid rgba(29,158,117,.35); }
+.badge-trial  { background: rgba(24,95,165,.18);  color: var(--color-trial);  border: 1px solid rgba(24,95,165,.35); }
+.badge-assess { background: rgba(186,117,23,.18); color: var(--color-assess); border: 1px solid rgba(186,117,23,.35); }
+.badge-hold   { background: rgba(163,45,45,.18);  color: var(--color-hold);   border: 1px solid rgba(163,45,45,.35); }
+
+.badge-rising   { background: rgba(29,158,117,.15); color: var(--color-rising); }
+.badge-stable   { background: rgba(107,114,128,.15); color: var(--color-stable); }
+.badge-declining { background: rgba(163,45,45,.15); color: var(--color-declining); }
+
+/* ---------- Filters ---------- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filters input[type="text"],
+.filters select {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 7px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.filters input[type="text"]:focus,
+.filters select:focus {
+  border-color: var(--color-trial);
+}
+
+.filters input[type="text"] { width: 220px; }
+
+/* ---------- Loading / Error states ---------- */
+.loading, .error {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--text-muted);
+}
+
+.error { color: var(--color-hold); }
+
+/* ---------- Tooltip (D3) ---------- */
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  max-width: 260px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5);
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.tooltip.visible { opacity: 1; }
+
+.tooltip strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.tooltip .metric-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.tooltip .metric-row span:last-child { color: var(--text); }
+
+/* ---------- Checkbox filters (radar) ---------- */
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.category-filters label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.category-filters label:hover { background: var(--bg-card-hover); }
+
+.category-filters input[type="checkbox"] {
+  accent-color: var(--color-trial);
+  width: 13px;
+  height: 13px;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2d3148; border-radius: 3px; }

@@ -1,0 +1,208 @@
+technologies:
+  - id: typescript
+    name: TypeScript
+    category: languages
+    position: adopt
+    since: "2024-01"
+    switching_cost: medium
+    notes: "Standard de facto pour tout projet Node/web"
+    sources:
+      github: microsoft/TypeScript
+      npm_package: typescript
+
+  - id: java
+    name: Java
+    category: languages
+    position: adopt
+    since: "2024-01"
+    switching_cost: high
+    notes: "Langage backend mature, écosystème Spring solide"
+    sources:
+      github: openjdk/jdk
+
+  - id: python
+    name: Python
+    category: languages
+    position: adopt
+    since: "2024-01"
+    switching_cost: medium
+    notes: "Scripting, data, ML/AI — polyvalence maximale"
+    sources:
+      github: python/cpython
+      pypi_package: pip
+
+  - id: react
+    name: React
+    category: frameworks_front
+    position: adopt
+    since: "2024-01"
+    switching_cost: medium
+    notes: "Dominant en production, écosystème Next.js solide"
+    sources:
+      github: facebook/react
+      npm_package: react
+
+  - id: angular
+    name: Angular
+    category: frameworks_front
+    position: trial
+    since: "2024-03"
+    switching_cost: high
+    notes: "Framework complet, pertinent pour grandes applications d'entreprise"
+    sources:
+      github: angular/angular
+      npm_package: "@angular/core"
+
+  - id: spring-boot
+    name: Spring Boot
+    category: frameworks_back
+    position: adopt
+    since: "2024-01"
+    switching_cost: high
+    notes: "Standard Java backend, auto-configuration, large écosystème"
+    sources:
+      github: spring-projects/spring-boot
+
+  - id: nestjs
+    name: NestJS
+    category: frameworks_back
+    position: trial
+    since: "2024-03"
+    switching_cost: medium
+    notes: "Architecture modulaire Node.js, TypeScript natif"
+    sources:
+      github: nestjs/nest
+      npm_package: "@nestjs/core"
+
+  - id: flutter
+    name: Flutter
+    category: mobile
+    position: adopt
+    since: "2024-01"
+    switching_cost: high
+    notes: "Cross-platform iOS/Android/Web avec une seule codebase Dart"
+    sources:
+      github: flutter/flutter
+
+  - id: postgresql
+    name: PostgreSQL
+    category: databases
+    position: adopt
+    since: "2024-01"
+    switching_cost: high
+    notes: "SGBDR de référence, JSON natif, fiabilité éprouvée"
+    sources:
+      github: postgres/postgres
+
+  - id: redis
+    name: Redis
+    category: databases
+    position: adopt
+    since: "2024-01"
+    switching_cost: medium
+    notes: "Cache in-memory, pub/sub, sessions — indispensable en production"
+    sources:
+      github: redis/redis
+
+  - id: docker
+    name: Docker
+    category: devops
+    position: adopt
+    since: "2024-01"
+    switching_cost: low
+    notes: "Conteneurisation standard, reproductibilité des environnements"
+    sources:
+      github: docker/cli
+
+  - id: kubernetes
+    name: Kubernetes
+    category: devops
+    position: trial
+    since: "2024-03"
+    switching_cost: high
+    notes: "Justifié dès 5+ services. K3s pour environnements légers."
+    sources:
+      github: kubernetes/kubernetes
+      cncf: true
+
+  - id: terraform
+    name: Terraform
+    category: devops
+    position: trial
+    since: "2024-03"
+    switching_cost: medium
+    notes: "IaC multi-cloud, alternative OpenTofu à considérer"
+    sources:
+      github: hashicorp/terraform
+
+  - id: github-actions
+    name: GitHub Actions
+    category: devops
+    position: adopt
+    since: "2024-01"
+    switching_cost: medium
+    notes: "CI/CD natif GitHub, marketplace d'actions riche"
+    sources: {}
+
+  - id: prometheus
+    name: Prometheus
+    category: observability
+    position: adopt
+    since: "2024-01"
+    switching_cost: medium
+    notes: "Standard de facto pour les métriques, intégration Grafana"
+    sources:
+      github: prometheus/prometheus
+      cncf: true
+
+  - id: grafana
+    name: Grafana
+    category: observability
+    position: adopt
+    since: "2024-01"
+    switching_cost: medium
+    notes: "Dashboards puissants, supporte Prometheus/Loki/Tempo"
+    sources:
+      github: grafana/grafana
+
+  - id: keycloak
+    name: Keycloak
+    category: security
+    position: trial
+    since: "2024-03"
+    switching_cost: high
+    notes: "IAM open-source, OAuth2/OIDC, SSO — alternative à Auth0"
+    sources:
+      github: keycloak/keycloak
+
+  - id: kafka
+    name: Apache Kafka
+    category: messaging
+    position: assess
+    since: "2024-06"
+    switching_cost: high
+    notes: "Event streaming haute performance, complexité opérationnelle à évaluer"
+    sources:
+      github: apache/kafka
+
+  - id: opentelemetry
+    name: OpenTelemetry
+    category: observability
+    position: trial
+    since: "2024-03"
+    switching_cost: medium
+    notes: "Standard émergent pour traces/métriques/logs, vendor-neutral"
+    sources:
+      github: open-telemetry/opentelemetry-collector
+      cncf: true
+
+  - id: ollama
+    name: Ollama / OpenAI
+    category: ai
+    position: assess
+    since: "2024-06"
+    switching_cost: low
+    notes: "LLMs locaux (Ollama) et API cloud (OpenAI) — écosystème en évolution rapide"
+    sources:
+      github: ollama/ollama
+      npm_package: openai

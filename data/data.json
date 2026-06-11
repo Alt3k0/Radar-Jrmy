@@ -1,0 +1,226 @@
+{
+  "generated_at": "2026-06-11T00:00:00Z",
+  "schema_version": "1.0",
+  "technologies": [
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "category": "languages",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "medium",
+      "notes": "Standard de facto pour tout projet Node/web",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "category": "languages",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "high",
+      "notes": "Langage backend mature, écosystème Spring solide",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "languages",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "medium",
+      "notes": "Scripting, data, ML/AI — polyvalence maximale",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "category": "frameworks_front",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "medium",
+      "notes": "Dominant en production, écosystème Next.js solide",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "angular",
+      "name": "Angular",
+      "category": "frameworks_front",
+      "position": "trial",
+      "since": "2024-03",
+      "switching_cost": "high",
+      "notes": "Framework complet, pertinent pour grandes applications d'entreprise",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "spring-boot",
+      "name": "Spring Boot",
+      "category": "frameworks_back",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "high",
+      "notes": "Standard Java backend, auto-configuration, large écosystème",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "nestjs",
+      "name": "NestJS",
+      "category": "frameworks_back",
+      "position": "trial",
+      "since": "2024-03",
+      "switching_cost": "medium",
+      "notes": "Architecture modulaire Node.js, TypeScript natif",
+      "metrics": {},
+      "trajectory": "rising"
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter",
+      "category": "mobile",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "high",
+      "notes": "Cross-platform iOS/Android/Web avec une seule codebase Dart",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "category": "databases",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "high",
+      "notes": "SGBDR de référence, JSON natif, fiabilité éprouvée",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "category": "databases",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "medium",
+      "notes": "Cache in-memory, pub/sub, sessions — indispensable en production",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "category": "devops",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "low",
+      "notes": "Conteneurisation standard, reproductibilité des environnements",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "category": "devops",
+      "position": "trial",
+      "since": "2024-03",
+      "switching_cost": "high",
+      "notes": "Justifié dès 5+ services. K3s pour environnements légers.",
+      "metrics": {},
+      "trajectory": "rising"
+    },
+    {
+      "id": "terraform",
+      "name": "Terraform",
+      "category": "devops",
+      "position": "trial",
+      "since": "2024-03",
+      "switching_cost": "medium",
+      "notes": "IaC multi-cloud, alternative OpenTofu à considérer",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "github-actions",
+      "name": "GitHub Actions",
+      "category": "devops",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "medium",
+      "notes": "CI/CD natif GitHub, marketplace d'actions riche",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "prometheus",
+      "name": "Prometheus",
+      "category": "observability",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "medium",
+      "notes": "Standard de facto pour les métriques, intégration Grafana",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "grafana",
+      "name": "Grafana",
+      "category": "observability",
+      "position": "adopt",
+      "since": "2024-01",
+      "switching_cost": "medium",
+      "notes": "Dashboards puissants, supporte Prometheus/Loki/Tempo",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "keycloak",
+      "name": "Keycloak",
+      "category": "security",
+      "position": "trial",
+      "since": "2024-03",
+      "switching_cost": "high",
+      "notes": "IAM open-source, OAuth2/OIDC, SSO — alternative à Auth0",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "kafka",
+      "name": "Apache Kafka",
+      "category": "messaging",
+      "position": "assess",
+      "since": "2024-06",
+      "switching_cost": "high",
+      "notes": "Event streaming haute performance, complexité opérationnelle à évaluer",
+      "metrics": {},
+      "trajectory": "stable"
+    },
+    {
+      "id": "opentelemetry",
+      "name": "OpenTelemetry",
+      "category": "observability",
+      "position": "trial",
+      "since": "2024-03",
+      "switching_cost": "medium",
+      "notes": "Standard émergent pour traces/métriques/logs, vendor-neutral",
+      "metrics": {},
+      "trajectory": "rising"
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama / OpenAI",
+      "category": "ai",
+      "position": "assess",
+      "since": "2024-06",
+      "switching_cost": "low",
+      "notes": "LLMs locaux (Ollama) et API cloud (OpenAI) — écosystème en évolution rapide",
+      "metrics": {},
+      "trajectory": "rising"
+    }
+  ]
+}

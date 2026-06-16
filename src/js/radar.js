@@ -18,10 +18,23 @@ const RINGS = [
 const RING_INDEX = { adopt: 0, trial: 1, assess: 2, hold: 3 };
 
 const CATEGORIES = [
-  'Languages', 'Frameworks_front', 'Frameworks_back',
-  'Mobile', 'Databases', 'Devops',
-  'Observability', 'Security', 'Messaging', 'IA',
+  'languages', 'frameworks_front', 'frameworks_back',
+  'mobile', 'databases', 'devops',
+  'observability', 'security', 'messaging', 'ai',
 ];
+
+const CATEGORY_LABELS = {
+  languages: 'Languages',
+  frameworks_front: 'Frameworks front',
+  frameworks_back: 'Frameworks back',
+  mobile: 'Mobile',
+  databases: 'Databases',
+  devops: 'Devops',
+  observability: 'Observability',
+  security: 'Security',
+  messaging: 'Messaging',
+  ai: 'IA',
+};
 
 let allTechs = [];
 const activeCategories = new Set(CATEGORIES);
@@ -165,7 +178,7 @@ function buildCategoryFilters() {
     dot.style.cssText = `display:inline-block;width:8px;height:8px;border-radius:50%;background:${getCategoryColor(cat)}`;
     label.appendChild(cb);
     label.appendChild(dot);
-    label.appendChild(document.createTextNode(' ' + cat.replace('_', ' ')));
+    label.appendChild(document.createTextNode(' ' + (CATEGORY_LABELS[cat] ?? cat.replace(/_/g, ' '))));
     container.appendChild(label);
   });
 }

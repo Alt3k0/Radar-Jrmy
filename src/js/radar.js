@@ -71,8 +71,8 @@ function buildSvg() {
   const svg = d3.select('#radar-svg')
     .attr('viewBox', `0 0 ${WIDTH} ${HEIGHT}`)
     .attr('preserveAspectRatio', 'xMidYMid meet')
-    .attr('width', null)
-    .attr('height', null);
+    .attr('width', '100%')
+    .attr('height', '100%');
 
   svg.selectAll('*').remove();
 

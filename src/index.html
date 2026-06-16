@@ -120,18 +120,17 @@
     #radar-wrapper {
       flex: 1;
       min-height: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 100%;
+    }
+
+    #radar-container {
+      height: 100%;
     }
 
     #radar-svg {
       display: block;
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
+      width: 100%;
+      height: 100%;
     }
 
     /* ── Responsive : sidebar en haut sur petits écrans ── */
@@ -155,7 +154,8 @@
       }
       .sidebar-section { margin-bottom: 0; flex: 1; min-width: 140px; }
       #radar-wrapper { flex: none; }
-      #radar-svg { max-height: none; width: 100%; height: auto; }
+      #radar-container { height: auto; }
+      #radar-svg { height: auto; }
     }
   </style>
 </head>

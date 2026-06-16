@@ -23,9 +23,9 @@ def main() -> None:
 
     if not summary_file:
         if rising:
-            print(f"📈 En hausse ({len(rising)}) : {", ".join(t["name"] for t in rising)}")
+            print(f"📈 En hausse ({len(rising)}) : {', '.join(t['name'] for t in rising)}")
         if declining:
-            print(f"📉 En baisse ({len(declining)}) : {", ".join(t["name"] for t in declining)}")
+            print(f"📉 En baisse ({len(declining)}) : {', '.join(t['name'] for t in declining)}")
         if not rising and not declining:
             print("→ Toutes les technologies sont stables.")
         return
@@ -45,7 +45,7 @@ def main() -> None:
             stars = t.get("metrics", {}).get("github", {}).get("stars", "—")
             stars_fmt = f"{stars:,}".replace(",", " ") if isinstance(stars, int) else str(stars)
             pos = t["position"].upper()
-            lines.append(f"| **{t["name"]}** | {t["category"]} | `{pos}` | {stars_fmt} |")
+            lines.append(f"| **{t['name']}** | {t['category']} | `{pos}` | {stars_fmt} |")
         lines.append("")
 
     if declining:
@@ -54,7 +54,7 @@ def main() -> None:
         lines.append("| Technologie | Catégorie | Position |")
         lines.append("|------------|-----------|----------|")
         for t in declining:
-            lines.append(f"| **{t["name"]}** | {t["category"]} | `{t["position"].upper()}` |")
+            lines.append(f"| **{t['name']}** | {t['category']} | `{t['position'].upper()}` |")
         lines.append("")
 
     if not rising and not declining:

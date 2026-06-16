@@ -128,8 +128,7 @@ async def main() -> int:
     logger.info("Loaded %d technologies", len(technologies))
 
     collect_tasks = [
-        collect_technology(tech, previous_data.get(tech["id"]))
-        for tech in technologies
+        collect_technology(tech, previous_data.get(tech["id"])) for tech in technologies
     ]
     results = await asyncio.gather(*collect_tasks, return_exceptions=True)
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const DATA_URL = '../data/data.json';
+const DATA_URL = './data.json';
 
 let _cache = null;
 

@@ -2,6 +2,9 @@
   "name": "Radar-Jrmy",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "node -e \"require('fs').copyFileSync('data/data.json','src/data.json')\" && echo \"data.json copied to src/ — open src/index.html in your browser\""
+  },
   "devDependencies": {
     "eslint": "^8.57.0",
     "htmlhint": "^1.1.4"

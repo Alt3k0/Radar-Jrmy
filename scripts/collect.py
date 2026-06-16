@@ -5,7 +5,7 @@ import asyncio
 import json
 import logging
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import yaml
@@ -97,7 +97,7 @@ async def collect_technology(tech: dict, prev_tech: dict | None) -> dict:
 
     if tasks:
         results = await asyncio.gather(*tasks.values(), return_exceptions=True)
-        for key, result in zip(tasks.keys(), results):
+        for key, result in zip(tasks.keys(), results, strict=True):
             if isinstance(result, Exception):
                 logger.warning("Source %s failed for %s: %s", key, tech["id"], result)
             elif result is not None:
@@ -135,21 +135,27 @@ async def main() -> int:
 
     collected = []
     failed = 0
-    for tech, result in zip(technologies, results):
+    for tech, result in zip(technologies, results, strict=True):
         if isinstance(result, Exception):
             logger.error("Failed to collect %s: %s", tech["id"], result)
             failed += 1
         else:
             collected.append(result)
             source_count = len(result.get("metrics", {}))
-            logger.info("Collected %s — %d sources, trajectory=%s", tech["id"], source_count, result["trajectory"])
+            logger.info(
+                "Collected %s — %d sources, trajectory=%s",
+                tech["id"], source_count, result["trajectory"],
+            )
 
     total = len(technologies)
     failure_rate = failed / total if total > 0 else 0
-    logger.info("Collection complete: %d/%d succeeded (%.0f%% failure)", total - failed, total, failure_rate * 100)
+    logger.info(
+        "Collection complete: %d/%d succeeded (%.0f%% failure)",
+        total - failed, total, failure_rate * 100,
+    )
 
     output = {
-        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "generated_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "schema_version": "1.0",
         "technologies": collected,
     }

@@ -37,17 +37,20 @@ def main() -> None:
     ]
 
     if rising:
-        lines.append(f"## 📈 En hausse — {len(rising)} technologie{'s' if len(rising) > 1 else ''}\n")
+        label = "technologies" if len(rising) > 1 else "technologie"
+        lines.append(f"## 📈 En hausse — {len(rising)} {label}\n")
         lines.append("| Technologie | Catégorie | Position | ⭐ Stars |")
         lines.append("|------------|-----------|----------|---------|")
         for t in rising:
             stars = t.get("metrics", {}).get("github", {}).get("stars", "—")
             stars_fmt = f"{stars:,}".replace(",", " ") if isinstance(stars, int) else str(stars)
-            lines.append(f"| **{t['name']}** | {t['category']} | `{t['position'].upper()}` | {stars_fmt} |")
+            pos = t['position'].upper()
+            lines.append(f"| **{t['name']}** | {t['category']} | `{pos}` | {stars_fmt} |")
         lines.append("")
 
     if declining:
-        lines.append(f"## 📉 En baisse — {len(declining)} technologie{'s' if len(declining) > 1 else ''}\n")
+        label = "technologies" if len(declining) > 1 else "technologie"
+        lines.append(f"## 📉 En baisse — {len(declining)} {label}\n")
         lines.append("| Technologie | Catégorie | Position |")
         lines.append("|------------|-----------|----------|")
         for t in declining:

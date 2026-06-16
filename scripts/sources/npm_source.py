@@ -1,5 +1,5 @@
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 from urllib.parse import quote
 
@@ -12,7 +12,7 @@ BASE_URL = "https://api.npmjs.org/downloads/point"
 
 async def fetch_npm_metrics(package: str, previous: dict | None = None) -> dict[str, Any] | None:
     encoded = quote(package, safe="")
-    fetched_at = datetime.now(timezone.utc).isoformat()
+    fetched_at = datetime.now(UTC).isoformat()
 
     current = await get_json(f"{BASE_URL}/last-week/{encoded}")
     if current is None:

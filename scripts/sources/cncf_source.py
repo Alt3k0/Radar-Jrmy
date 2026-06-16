@@ -1,5 +1,5 @@
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 from scripts.utils.http_client import get_json
@@ -19,7 +19,7 @@ async def _load_landscape() -> dict | None:
 
 
 async def fetch_cncf_metrics(project_name: str) -> dict[str, Any] | None:
-    fetched_at = datetime.now(timezone.utc).isoformat()
+    fetched_at = datetime.now(UTC).isoformat()
     landscape = await _load_landscape()
     if landscape is None:
         return None

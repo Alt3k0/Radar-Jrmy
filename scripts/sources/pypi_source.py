@@ -1,5 +1,5 @@
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 from scripts.utils.http_client import get_json
@@ -10,7 +10,7 @@ BASE_URL = "https://pypistats.org/api/packages"
 
 
 async def fetch_pypi_metrics(package: str, previous: dict | None = None) -> dict[str, Any] | None:
-    fetched_at = datetime.now(timezone.utc).isoformat()
+    fetched_at = datetime.now(UTC).isoformat()
 
     data = await get_json(f"{BASE_URL}/{package}/recent")
     if data is None:

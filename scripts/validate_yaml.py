@@ -41,10 +41,14 @@ def validate() -> list[str]:
             ids_seen.add(tech_id)
 
         if tech.get("position") and tech["position"] not in VALID_POSITIONS:
-            errors.append(f"{prefix}: position invalide '{tech['position']}' (valeurs: {VALID_POSITIONS})")
+            errors.append(
+                f"{prefix}: position invalide '{tech['position']}' (valeurs: {VALID_POSITIONS})"
+            )
 
         if tech.get("category") and tech["category"] not in VALID_CATEGORIES:
-            errors.append(f"{prefix}: catégorie invalide '{tech['category']}' (valeurs: {VALID_CATEGORIES})")
+            errors.append(
+                f"{prefix}: catégorie invalide '{tech['category']}' (valeurs: {VALID_CATEGORIES})"
+            )
 
         if tech.get("switching_cost") and tech["switching_cost"] not in VALID_SWITCHING_COSTS:
             errors.append(f"{prefix}: switching_cost invalide '{tech['switching_cost']}'")

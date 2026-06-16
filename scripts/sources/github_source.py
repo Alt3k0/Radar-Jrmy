@@ -1,6 +1,6 @@
 import logging
 import os
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 from scripts.utils.http_client import get_json
@@ -19,7 +19,7 @@ def _auth_headers() -> dict[str, str]:
 
 async def fetch_github_metrics(repo: str, previous: dict | None = None) -> dict[str, Any] | None:
     headers = _auth_headers()
-    fetched_at = datetime.now(timezone.utc).isoformat()
+    fetched_at = datetime.now(UTC).isoformat()
 
     repo_data = await get_json(f"{BASE_URL}/repos/{repo}", headers=headers)
     if repo_data is None:
@@ -36,7 +36,7 @@ async def fetch_github_metrics(repo: str, previous: dict | None = None) -> dict[
         commit_date_str = commits_data[0].get("commit", {}).get("committer", {}).get("date")
         if commit_date_str:
             commit_date = datetime.fromisoformat(commit_date_str.replace("Z", "+00:00"))
-            delta = datetime.now(timezone.utc) - commit_date
+            delta = datetime.now(UTC) - commit_date
             last_commit_days_ago = delta.days
 
     stars = repo_data.get("stargazers_count", 0)

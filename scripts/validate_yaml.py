@@ -11,9 +11,16 @@ TECH_FILE = ROOT / "technologies.yaml"
 
 VALID_POSITIONS = {"adopt", "trial", "assess", "hold"}
 VALID_CATEGORIES = {
-    "languages", "frameworks_front", "frameworks_back",
-    "mobile", "databases", "devops", "observability",
-    "security", "messaging", "ai",
+    "languages",
+    "frameworks_front",
+    "frameworks_back",
+    "mobile",
+    "databases",
+    "devops",
+    "observability",
+    "security",
+    "messaging",
+    "ai",
 }
 VALID_SWITCHING_COSTS = {"low", "medium", "high"}
 REQUIRED_FIELDS = {"id", "name", "category", "position"}

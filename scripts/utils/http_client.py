@@ -34,7 +34,10 @@ async def get_json(url: str, headers: dict | None = None, params: dict | None = 
         except httpx.HTTPStatusError as e:
             logger.warning(
                 "HTTP error %d on %s (attempt %d/%d)",
-                e.response.status_code, url, attempt, MAX_RETRIES,
+                e.response.status_code,
+                url,
+                attempt,
+                MAX_RETRIES,
             )
         except httpx.RequestError as e:
             logger.warning("Request error on %s: %s (attempt %d/%d)", url, e, attempt, MAX_RETRIES)

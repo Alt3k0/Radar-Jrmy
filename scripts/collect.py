@@ -144,14 +144,18 @@ async def main() -> int:
             source_count = len(result.get("metrics", {}))
             logger.info(
                 "Collected %s — %d sources, trajectory=%s",
-                tech["id"], source_count, result["trajectory"],
+                tech["id"],
+                source_count,
+                result["trajectory"],
             )
 
     total = len(technologies)
     failure_rate = failed / total if total > 0 else 0
     logger.info(
         "Collection complete: %d/%d succeeded (%.0f%% failure)",
-        total - failed, total, failure_rate * 100,
+        total - failed,
+        total,
+        failure_rate * 100,
     )
 
     output = {

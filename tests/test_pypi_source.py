@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 
+import httpx
 import pytest
 from pytest_httpx import HTTPXMock
 
@@ -62,17 +63,16 @@ async def test_fetch_pypi_metrics_not_found(httpx_mock: HTTPXMock):
 
 @pytest.mark.asyncio
 async def test_fetch_pypi_metrics_timeout(httpx_mock: HTTPXMock):
-    import httpx as httpx_lib
     httpx_mock.add_exception(
-        httpx_lib.TimeoutException("timeout"),
+        httpx.TimeoutException("timeout"),
         url="https://pypistats.org/api/packages/pip/recent",
     )
     httpx_mock.add_exception(
-        httpx_lib.TimeoutException("timeout"),
+        httpx.TimeoutException("timeout"),
         url="https://pypistats.org/api/packages/pip/recent",
     )
     httpx_mock.add_exception(
-        httpx_lib.TimeoutException("timeout"),
+        httpx.TimeoutException("timeout"),
         url="https://pypistats.org/api/packages/pip/recent",
     )
     result = await fetch_pypi_metrics("pip")

@@ -7,11 +7,14 @@
   <title>Tech Radar</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
+    html, body { overflow: hidden; }
+
     /* ── Mise en page générale ── */
     .radar-page-layout {
       display: flex;
-      align-items: flex-start;
-      min-height: calc(100vh - 52px);
+      align-items: stretch;
+      height: calc(100vh - 52px);
+      max-height: 960px;
     }
 
     /* ── Sidebar gauche ── */
@@ -105,7 +108,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 24px 20px;
+      padding: 16px 20px;
+      overflow: hidden;
     }
 
     .radar-center h1 {
@@ -114,20 +118,30 @@
     }
 
     #radar-wrapper {
+      flex: 1;
+      min-height: 0;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      width: 100%;
     }
 
     #radar-svg {
       display: block;
       max-width: 100%;
+      max-height: 100%;
+      width: auto;
       height: auto;
     }
 
     /* ── Responsive : sidebar en haut sur petits écrans ── */
     @media (max-width: 800px) {
-      .radar-page-layout { flex-direction: column; }
+      html, body { overflow: auto; }
+      .radar-page-layout {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+      }
       .radar-sidebar {
         width: 100%;
         height: auto;
@@ -140,6 +154,8 @@
         padding: 16px;
       }
       .sidebar-section { margin-bottom: 0; flex: 1; min-width: 140px; }
+      #radar-wrapper { flex: none; }
+      #radar-svg { max-height: none; width: 100%; height: auto; }
     }
   </style>
 </head>
@@ -236,7 +252,6 @@
       <div id="radar-wrapper">
         <div id="radar-container">
           <svg id="radar-svg"></svg>
-          <div class="loading" id="loading-msg"></div>
         </div>
       </div>
     </main>

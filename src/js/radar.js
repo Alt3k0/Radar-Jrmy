@@ -69,9 +69,10 @@ function placeDot(tech, index) {
 
 function buildSvg() {
   const svg = d3.select('#radar-svg')
-    .attr('width', WIDTH)
-    .attr('height', HEIGHT)
-    .attr('viewBox', `0 0 ${WIDTH} ${HEIGHT}`);
+    .attr('viewBox', `0 0 ${WIDTH} ${HEIGHT}`)
+    .attr('preserveAspectRatio', 'xMidYMid meet')
+    .attr('width', null)
+    .attr('height', null);
 
   svg.selectAll('*').remove();
 

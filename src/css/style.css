@@ -3,20 +3,32 @@
    ===================================================== */
 
 :root {
-  --color-adopt: #1D9E75;
-  --color-trial: #185FA5;
-  --color-assess: #BA7517;
-  --color-hold: #A32D2D;
-  --color-rising: #1D9E75;
-  --color-stable: #6b7280;
-  --color-declining: #A32D2D;
+  /* ── Palette principale ── */
+  --navy:    #1A204E;
+  --orange:  #F29F52;
+  --yellow:  #FDE892;
+  --lavender:#CEC4E5;
+  --white:   #FCFFFA;
+  --hold-purple: #5E5483;
 
-  --bg: #0f1117;
-  --bg-card: #1a1d27;
-  --bg-card-hover: #21253a;
-  --border: #2d3148;
-  --text: #e2e8f0;
-  --text-muted: #8892a4;
+  /* ── Positions radar ── */
+  --color-adopt:  var(--orange);
+  --color-trial:  var(--yellow);
+  --color-assess: var(--lavender);
+  --color-hold:   var(--hold-purple);
+
+  /* ── Trajectoires ── */
+  --color-rising:   var(--orange);
+  --color-stable:   #9B95BE;
+  --color-declining: var(--hold-purple);
+
+  /* ── UI ── */
+  --bg:           #0D1135;
+  --bg-card:      var(--navy);
+  --bg-card-hover:#222A64;
+  --border:       #2D3572;
+  --text:         var(--white);
+  --text-muted:   #9B95BE;
   --font: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -105,14 +117,14 @@ h1 {
   letter-spacing: 0.04em;
 }
 
-.badge-adopt  { background: rgba(29,158,117,.18); color: var(--color-adopt);  border: 1px solid rgba(29,158,117,.35); }
-.badge-trial  { background: rgba(24,95,165,.18);  color: var(--color-trial);  border: 1px solid rgba(24,95,165,.35); }
-.badge-assess { background: rgba(186,117,23,.18); color: var(--color-assess); border: 1px solid rgba(186,117,23,.35); }
-.badge-hold   { background: rgba(163,45,45,.18);  color: var(--color-hold);   border: 1px solid rgba(163,45,45,.35); }
+.badge-adopt  { background: rgba(242,159,82,.18);  color: var(--color-adopt);  border: 1px solid rgba(242,159,82,.45); }
+.badge-trial  { background: rgba(253,232,146,.15); color: #C8B830;             border: 1px solid rgba(253,232,146,.5); }
+.badge-assess { background: rgba(206,196,229,.15); color: var(--color-assess); border: 1px solid rgba(206,196,229,.45); }
+.badge-hold   { background: rgba(94,84,131,.25);   color: var(--color-hold);   border: 1px solid rgba(94,84,131,.5); }
 
-.badge-rising   { background: rgba(29,158,117,.15); color: var(--color-rising); }
-.badge-stable   { background: rgba(107,114,128,.15); color: var(--color-stable); }
-.badge-declining { background: rgba(163,45,45,.15); color: var(--color-declining); }
+.badge-rising   { background: rgba(242,159,82,.18);  color: var(--color-rising); }
+.badge-stable   { background: rgba(155,149,190,.12); color: var(--color-stable); }
+.badge-declining { background: rgba(94,84,131,.2);   color: var(--color-declining); }
 
 /* ---------- Filters ---------- */
 .filters {
@@ -221,8 +233,8 @@ h1 {
 
 /* ---------- Alert banner (rising technologies) ---------- */
 .alert-banner {
-  background: linear-gradient(90deg, rgba(29,158,117,.12), rgba(29,158,117,.06));
-  border-bottom: 1px solid rgba(29,158,117,.35);
+  background: linear-gradient(90deg, rgba(242,159,82,.12), rgba(242,159,82,.05));
+  border-bottom: 1px solid rgba(242,159,82,.35);
   padding: 10px 24px;
   display: flex;
   align-items: center;
@@ -276,8 +288,8 @@ h1 {
   display: none;
   align-items: center;
   gap: 4px;
-  background: rgba(29,158,117,.18);
-  border: 1px solid rgba(29,158,117,.4);
+  background: rgba(242,159,82,.18);
+  border: 1px solid rgba(242,159,82,.4);
   color: var(--color-rising);
   font-size: 11px;
   font-weight: 700;
@@ -351,9 +363,9 @@ h1 {
   margin-bottom: 8px;
 }
 
-.detail-pros h4    { color: var(--color-adopt); }
-.detail-cons h4    { color: var(--color-assess); }
-.detail-usecases h4 { color: var(--color-trial); }
+.detail-pros h4    { color: var(--orange); }
+.detail-cons h4    { color: var(--lavender); }
+.detail-usecases h4 { color: #C8B830; }
 
 .detail-section ul {
   list-style: none;
@@ -370,6 +382,6 @@ h1 {
   line-height: 1.5;
 }
 
-.detail-pros li::before    { content: '•'; position: absolute; left: 0; color: var(--color-adopt); }
-.detail-cons li::before    { content: '•'; position: absolute; left: 0; color: var(--color-assess); }
-.detail-usecases li::before { content: '•'; position: absolute; left: 0; color: var(--color-trial); }
+.detail-pros li::before    { content: '•'; position: absolute; left: 0; color: var(--orange); }
+.detail-cons li::before    { content: '•'; position: absolute; left: 0; color: var(--lavender); }
+.detail-usecases li::before { content: '•'; position: absolute; left: 0; color: #C8B830; }

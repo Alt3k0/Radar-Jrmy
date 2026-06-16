@@ -31,8 +31,8 @@ export function formatDate(iso) {
 }
 
 export function getPositionColor(position) {
-  const colors = { adopt: '#1D9E75', trial: '#185FA5', assess: '#BA7517', hold: '#A32D2D' };
-  return colors[position] || '#6b7280';
+  const colors = { adopt: '#F29F52', trial: '#FDE892', assess: '#CEC4E5', hold: '#5E5483' };
+  return colors[position] || '#9B95BE';
 }
 
 export function getCategoryColor(category) {

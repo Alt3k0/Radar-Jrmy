@@ -9,10 +9,10 @@ const CY = HEIGHT / 2;
 const MAX_R = 340;
 
 const RINGS = [
-  { id: 'adopt',  label: 'ADOPT',  r: MAX_R * 0.25, color: '#1D9E75' },
-  { id: 'trial',  label: 'TRIAL',  r: MAX_R * 0.50, color: '#185FA5' },
-  { id: 'assess', label: 'ASSESS', r: MAX_R * 0.75, color: '#BA7517' },
-  { id: 'hold',   label: 'HOLD',   r: MAX_R * 1.00, color: '#A32D2D' },
+  { id: 'adopt',  label: 'ADOPT',  r: MAX_R * 0.25, color: '#F29F52' },
+  { id: 'trial',  label: 'TRIAL',  r: MAX_R * 0.50, color: '#FDE892' },
+  { id: 'assess', label: 'ASSESS', r: MAX_R * 0.75, color: '#CEC4E5' },
+  { id: 'hold',   label: 'HOLD',   r: MAX_R * 1.00, color: '#5E5483' },
 ];
 
 const RING_INDEX = { adopt: 0, trial: 1, assess: 2, hold: 3 };

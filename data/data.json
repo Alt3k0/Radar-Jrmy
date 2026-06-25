@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T19:59:51Z",
+  "generated_at": "2026-06-25T04:17:58Z",
   "schema_version": "1.0",
   "technologies": [
     {
@@ -27,17 +27,17 @@
       ],
       "metrics": {
         "github": {
-          "stars": 109379,
-          "stars_delta_30d": 3,
-          "open_issues": 5047,
+          "stars": 109381,
+          "stars_delta_30d": 2,
+          "open_issues": 5048,
           "last_commit_days_ago": 0,
           "forks": 13445,
-          "fetched_at": "2026-06-24T19:58:48.293534+00:00"
+          "fetched_at": "2026-06-25T04:17:50.336494+00:00"
         },
         "npm": {
           "downloads_weekly": 218054026,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.359682+00:00"
+          "fetched_at": "2026-06-25T04:17:50.407957+00:00"
         }
       },
       "trajectory": "stable"
@@ -67,12 +67,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 23034,
-          "stars_delta_30d": 0,
-          "open_issues": 379,
+          "stars": 23035,
+          "stars_delta_30d": 1,
+          "open_issues": 384,
           "last_commit_days_ago": 0,
-          "forks": 6359,
-          "fetched_at": "2026-06-24T19:58:48.380518+00:00"
+          "forks": 6358,
+          "fetched_at": "2026-06-25T04:17:50.426134+00:00"
         }
       },
       "trajectory": "stable"
@@ -102,18 +102,18 @@
       ],
       "metrics": {
         "github": {
-          "stars": 73516,
-          "stars_delta_30d": 99,
-          "open_issues": 9401,
+          "stars": 73528,
+          "stars_delta_30d": 12,
+          "open_issues": 9409,
           "last_commit_days_ago": 0,
-          "forks": 34772,
-          "fetched_at": "2026-06-24T19:58:48.397804+00:00"
+          "forks": 34776,
+          "fetched_at": "2026-06-25T04:17:50.444072+00:00"
         },
         "pypi": {
-          "downloads_last_month": 647096189,
-          "downloads_last_week": 144032839,
-          "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.415039+00:00"
+          "downloads_last_month": 651319848,
+          "downloads_last_week": 141190905,
+          "downloads_delta_pct": -1.97,
+          "fetched_at": "2026-06-25T04:17:50.462075+00:00"
         }
       },
       "trajectory": "stable"
@@ -143,12 +143,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 135039,
-          "stars_delta_30d": 97,
-          "open_issues": 10161,
+          "stars": 135047,
+          "stars_delta_30d": 8,
+          "open_issues": 10159,
           "last_commit_days_ago": 0,
-          "forks": 19017,
-          "fetched_at": "2026-06-24T19:58:48.432293+00:00"
+          "forks": 19020,
+          "fetched_at": "2026-06-25T04:17:50.479952+00:00"
         }
       },
       "trajectory": "stable"
@@ -178,12 +178,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 114260,
-          "stars_delta_30d": 116,
-          "open_issues": 12566,
+          "stars": 114279,
+          "stars_delta_30d": 19,
+          "open_issues": 12569,
           "last_commit_days_ago": 1,
           "forks": 15008,
-          "fetched_at": "2026-06-24T19:58:48.449534+00:00"
+          "fetched_at": "2026-06-25T04:17:50.497923+00:00"
         }
       },
       "trajectory": "stable"
@@ -215,7 +215,7 @@
         "npm": {
           "downloads_weekly": 150302852,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.484705+00:00"
+          "fetched_at": "2026-06-25T04:17:50.534070+00:00"
         }
       },
       "trajectory": "stable"
@@ -245,17 +245,17 @@
       ],
       "metrics": {
         "github": {
-          "stars": 100445,
-          "stars_delta_30d": -2,
-          "open_issues": 1145,
+          "stars": 100455,
+          "stars_delta_30d": 10,
+          "open_issues": 1146,
           "last_commit_days_ago": 0,
-          "forks": 27180,
-          "fetched_at": "2026-06-24T19:58:48.502096+00:00"
+          "forks": 27182,
+          "fetched_at": "2026-06-25T04:17:50.551966+00:00"
         },
         "npm": {
           "downloads_weekly": 6195920,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.519637+00:00"
+          "fetched_at": "2026-06-25T04:17:50.569910+00:00"
         }
       },
       "trajectory": "stable"
@@ -285,17 +285,17 @@
       ],
       "metrics": {
         "github": {
-          "stars": 53867,
-          "stars_delta_30d": 0,
-          "open_issues": 940,
-          "last_commit_days_ago": 7,
-          "forks": 9153,
-          "fetched_at": "2026-06-24T19:58:48.536908+00:00"
+          "stars": 53870,
+          "stars_delta_30d": 3,
+          "open_issues": 936,
+          "last_commit_days_ago": 8,
+          "forks": 9154,
+          "fetched_at": "2026-06-25T04:17:50.588047+00:00"
         },
         "npm": {
           "downloads_weekly": 14034742,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.554198+00:00"
+          "fetched_at": "2026-06-25T04:17:50.606203+00:00"
         }
       },
       "trajectory": "stable"
@@ -325,17 +325,17 @@
       ],
       "metrics": {
         "github": {
-          "stars": 140311,
-          "stars_delta_30d": 102,
-          "open_issues": 4117,
+          "stars": 140332,
+          "stars_delta_30d": 21,
+          "open_issues": 4123,
           "last_commit_days_ago": 0,
-          "forks": 31244,
-          "fetched_at": "2026-06-24T19:58:48.571324+00:00"
+          "forks": 31251,
+          "fetched_at": "2026-06-25T04:17:50.624114+00:00"
         },
         "npm": {
           "downloads_weekly": 43232992,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.588673+00:00"
+          "fetched_at": "2026-06-25T04:17:50.641968+00:00"
         }
       },
       "trajectory": "stable"
@@ -365,17 +365,17 @@
       ],
       "metrics": {
         "github": {
-          "stars": 87383,
-          "stars_delta_30d": 1,
+          "stars": 87402,
+          "stars_delta_30d": 19,
           "open_issues": 1041,
           "last_commit_days_ago": 1,
           "forks": 4957,
-          "fetched_at": "2026-06-24T19:58:48.606312+00:00"
+          "fetched_at": "2026-06-25T04:17:50.660097+00:00"
         },
         "npm": {
           "downloads_weekly": 4740676,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.623606+00:00"
+          "fetched_at": "2026-06-25T04:17:50.677927+00:00"
         }
       },
       "trajectory": "stable"
@@ -405,12 +405,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 81025,
-          "stars_delta_30d": 0,
+          "stars": 81030,
+          "stars_delta_30d": 5,
           "open_issues": 517,
           "last_commit_days_ago": 0,
           "forks": 41930,
-          "fetched_at": "2026-06-24T19:58:48.641032+00:00"
+          "fetched_at": "2026-06-25T04:17:50.695753+00:00"
         }
       },
       "trajectory": "stable"
@@ -440,17 +440,17 @@
       ],
       "metrics": {
         "github": {
-          "stars": 75954,
-          "stars_delta_30d": 2,
-          "open_issues": 36,
+          "stars": 75957,
+          "stars_delta_30d": 3,
+          "open_issues": 40,
           "last_commit_days_ago": 0,
           "forks": 8325,
-          "fetched_at": "2026-06-24T19:58:48.658333+00:00"
+          "fetched_at": "2026-06-25T04:17:50.713501+00:00"
         },
         "npm": {
           "downloads_weekly": 11637736,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.676271+00:00"
+          "fetched_at": "2026-06-25T04:17:50.731359+00:00"
         }
       },
       "trajectory": "stable"
@@ -480,18 +480,18 @@
       ],
       "metrics": {
         "github": {
-          "stars": 99616,
-          "stars_delta_30d": 11,
-          "open_issues": 101,
+          "stars": 99638,
+          "stars_delta_30d": 22,
+          "open_issues": 103,
           "last_commit_days_ago": 0,
-          "forks": 9473,
-          "fetched_at": "2026-06-24T19:58:48.693673+00:00"
+          "forks": 9477,
+          "fetched_at": "2026-06-25T04:17:50.749308+00:00"
         },
         "pypi": {
-          "downloads_last_month": 479021688,
-          "downloads_last_week": 116553890,
-          "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.711083+00:00"
+          "downloads_last_month": 481890059,
+          "downloads_last_week": 115872299,
+          "downloads_delta_pct": -0.58,
+          "fetched_at": "2026-06-25T04:17:50.767224+00:00"
         }
       },
       "trajectory": "stable"
@@ -521,12 +521,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 15732,
-          "stars_delta_30d": 3,
-          "open_issues": 2796,
+          "stars": 15733,
+          "stars_delta_30d": 1,
+          "open_issues": 2794,
           "last_commit_days_ago": 0,
-          "forks": 3217,
-          "fetched_at": "2026-06-24T19:58:48.728448+00:00"
+          "forks": 3218,
+          "fetched_at": "2026-06-25T04:17:50.785074+00:00"
         }
       },
       "trajectory": "stable"
@@ -556,17 +556,17 @@
       ],
       "metrics": {
         "github": {
-          "stars": 69242,
-          "stars_delta_30d": 2,
+          "stars": 69243,
+          "stars_delta_30d": 1,
           "open_issues": 213,
-          "last_commit_days_ago": 8,
-          "forks": 23829,
-          "fetched_at": "2026-06-24T19:58:48.745813+00:00"
+          "last_commit_days_ago": 9,
+          "forks": 23834,
+          "fetched_at": "2026-06-25T04:17:50.802903+00:00"
         },
         "npm": {
           "downloads_weekly": 110627794,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.763210+00:00"
+          "fetched_at": "2026-06-25T04:17:50.821108+00:00"
         }
       },
       "trajectory": "stable"
@@ -596,12 +596,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 177254,
-          "stars_delta_30d": 90,
-          "open_issues": 12925,
+          "stars": 177427,
+          "stars_delta_30d": 173,
+          "open_issues": 12916,
           "last_commit_days_ago": 0,
-          "forks": 30543,
-          "fetched_at": "2026-06-24T19:58:48.780513+00:00"
+          "forks": 30550,
+          "fetched_at": "2026-06-25T04:17:50.839033+00:00"
         }
       },
       "trajectory": "stable"
@@ -633,7 +633,7 @@
         "npm": {
           "downloads_weekly": 10485198,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.815178+00:00"
+          "fetched_at": "2026-06-25T04:17:50.875233+00:00"
         }
       },
       "trajectory": "stable"
@@ -663,12 +663,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 52964,
-          "stars_delta_30d": -1,
-          "open_issues": 306,
+          "stars": 52977,
+          "stars_delta_30d": 13,
+          "open_issues": 309,
           "last_commit_days_ago": 0,
           "forks": 6346,
-          "fetched_at": "2026-06-24T19:58:48.832433+00:00"
+          "fetched_at": "2026-06-25T04:17:50.893540+00:00"
         }
       },
       "trajectory": "stable"
@@ -699,16 +699,16 @@
       "metrics": {
         "github": {
           "stars": 15940,
-          "stars_delta_30d": -1,
+          "stars_delta_30d": 0,
           "open_issues": 103,
           "last_commit_days_ago": 2,
           "forks": 1210,
-          "fetched_at": "2026-06-24T19:58:48.849807+00:00"
+          "fetched_at": "2026-06-25T04:17:50.911458+00:00"
         },
         "npm": {
           "downloads_weekly": 3247422,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.867249+00:00"
+          "fetched_at": "2026-06-25T04:17:50.929387+00:00"
         }
       },
       "trajectory": "stable"
@@ -738,17 +738,17 @@
       ],
       "metrics": {
         "github": {
-          "stars": 52541,
-          "stars_delta_30d": 1,
-          "open_issues": 630,
+          "stars": 52543,
+          "stars_delta_30d": 2,
+          "open_issues": 629,
           "last_commit_days_ago": 0,
           "forks": 13353,
-          "fetched_at": "2026-06-24T19:58:48.884566+00:00"
+          "fetched_at": "2026-06-25T04:17:50.947389+00:00"
         },
         "npm": {
           "downloads_weekly": 403868,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:48.902324+00:00"
+          "fetched_at": "2026-06-25T04:17:50.965051+00:00"
         }
       },
       "trajectory": "stable"
@@ -778,12 +778,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 21262,
+          "stars": 21266,
           "stars_delta_30d": 4,
           "open_issues": 0,
           "last_commit_days_ago": 0,
           "forks": 5726,
-          "fetched_at": "2026-06-24T19:58:48.919600+00:00"
+          "fetched_at": "2026-06-25T04:17:50.982973+00:00"
         }
       },
       "trajectory": "stable"
@@ -813,12 +813,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 75081,
+          "stars": 75087,
           "stars_delta_30d": 6,
           "open_issues": 2846,
           "last_commit_days_ago": 0,
           "forks": 24676,
-          "fetched_at": "2026-06-24T19:58:48.936823+00:00"
+          "fetched_at": "2026-06-25T04:17:51.000661+00:00"
         }
       },
       "trajectory": "stable"
@@ -849,11 +849,11 @@
       "metrics": {
         "github": {
           "stars": 28390,
-          "stars_delta_30d": 2,
+          "stars_delta_30d": 0,
           "open_issues": 27,
           "last_commit_days_ago": 0,
           "forks": 5782,
-          "fetched_at": "2026-06-24T19:58:48.954184+00:00"
+          "fetched_at": "2026-06-25T04:17:51.018518+00:00"
         }
       },
       "trajectory": "stable"
@@ -883,12 +883,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 77143,
-          "stars_delta_30d": 3,
-          "open_issues": 5864,
+          "stars": 77156,
+          "stars_delta_30d": 13,
+          "open_issues": 5878,
           "last_commit_days_ago": 0,
-          "forks": 25830,
-          "fetched_at": "2026-06-24T19:58:48.971435+00:00"
+          "forks": 25829,
+          "fetched_at": "2026-06-25T04:17:51.036513+00:00"
         }
       },
       "trajectory": "stable"
@@ -918,12 +918,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 48262,
-          "stars_delta_30d": 2,
-          "open_issues": 6186,
+          "stars": 48273,
+          "stars_delta_30d": 11,
+          "open_issues": 6202,
           "last_commit_days_ago": 0,
-          "forks": 8550,
-          "fetched_at": "2026-06-24T19:58:48.988776+00:00"
+          "forks": 8552,
+          "fetched_at": "2026-06-25T04:17:51.054450+00:00"
         }
       },
       "trajectory": "stable"
@@ -954,11 +954,11 @@
       "metrics": {
         "github": {
           "stars": 5933,
-          "stars_delta_30d": 2,
-          "open_issues": 790,
+          "stars_delta_30d": 0,
+          "open_issues": 791,
           "last_commit_days_ago": 0,
           "forks": 2149,
-          "fetched_at": "2026-06-24T19:58:49.006539+00:00"
+          "fetched_at": "2026-06-25T04:17:51.072462+00:00"
         }
       },
       "trajectory": "stable"
@@ -988,12 +988,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 123375,
-          "stars_delta_30d": 107,
-          "open_issues": 2761,
+          "stars": 123385,
+          "stars_delta_30d": 10,
+          "open_issues": 2750,
           "last_commit_days_ago": 0,
-          "forks": 43267,
-          "fetched_at": "2026-06-24T19:58:49.024018+00:00"
+          "forks": 43269,
+          "fetched_at": "2026-06-25T04:17:51.090188+00:00"
         }
       },
       "trajectory": "stable"
@@ -1023,12 +1023,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 48773,
-          "stars_delta_30d": 1,
-          "open_issues": 1916,
+          "stars": 48777,
+          "stars_delta_30d": 4,
+          "open_issues": 1917,
           "last_commit_days_ago": 0,
           "forks": 10372,
-          "fetched_at": "2026-06-24T19:58:49.058500+00:00"
+          "fetched_at": "2026-06-25T04:17:51.125996+00:00"
         }
       },
       "trajectory": "stable"
@@ -1084,12 +1084,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 23243,
+          "stars": 23246,
           "stars_delta_30d": 3,
           "open_issues": 4195,
           "last_commit_days_ago": 0,
-          "forks": 7367,
-          "fetched_at": "2026-06-24T19:58:49.075729+00:00"
+          "forks": 7368,
+          "fetched_at": "2026-06-25T04:17:51.148330+00:00"
         }
       },
       "trajectory": "stable"
@@ -1119,12 +1119,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 64751,
+          "stars": 64756,
           "stars_delta_30d": 5,
           "open_issues": 846,
           "last_commit_days_ago": 0,
-          "forks": 10522,
-          "fetched_at": "2026-06-24T19:58:49.110511+00:00"
+          "forks": 10523,
+          "fetched_at": "2026-06-25T04:17:51.186423+00:00"
         }
       },
       "trajectory": "stable"
@@ -1154,12 +1154,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 74643,
-          "stars_delta_30d": 7,
+          "stars": 74665,
+          "stars_delta_30d": 22,
           "open_issues": 3525,
           "last_commit_days_ago": 0,
-          "forks": 14096,
-          "fetched_at": "2026-06-24T19:58:49.145163+00:00"
+          "forks": 14102,
+          "fetched_at": "2026-06-25T04:17:51.222902+00:00"
         }
       },
       "trajectory": "stable"
@@ -1189,12 +1189,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 7169,
-          "stars_delta_30d": 0,
+          "stars": 7170,
+          "stars_delta_30d": 1,
           "open_issues": 688,
           "last_commit_days_ago": 0,
-          "forks": 2116,
-          "fetched_at": "2026-06-24T19:58:49.162412+00:00"
+          "forks": 2117,
+          "fetched_at": "2026-06-25T04:17:51.241183+00:00"
         }
       },
       "trajectory": "stable"
@@ -1224,12 +1224,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 28435,
+          "stars": 28438,
           "stars_delta_30d": 3,
-          "open_issues": 1659,
+          "open_issues": 1667,
           "last_commit_days_ago": 0,
           "forks": 4032,
-          "fetched_at": "2026-06-24T19:58:49.196929+00:00"
+          "fetched_at": "2026-06-25T04:17:51.277115+00:00"
         }
       },
       "trajectory": "stable"
@@ -1259,12 +1259,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 22918,
-          "stars_delta_30d": 1,
-          "open_issues": 454,
+          "stars": 22922,
+          "stars_delta_30d": 4,
+          "open_issues": 451,
           "last_commit_days_ago": 0,
           "forks": 2970,
-          "fetched_at": "2026-06-24T19:58:49.214178+00:00"
+          "fetched_at": "2026-06-25T04:17:51.294858+00:00"
         }
       },
       "trajectory": "stable"
@@ -1294,12 +1294,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 35048,
-          "stars_delta_30d": 3,
-          "open_issues": 2877,
+          "stars": 35053,
+          "stars_delta_30d": 5,
+          "open_issues": 2872,
           "last_commit_days_ago": 0,
-          "forks": 8530,
-          "fetched_at": "2026-06-24T19:58:49.248907+00:00"
+          "forks": 8533,
+          "fetched_at": "2026-06-25T04:17:51.330747+00:00"
         }
       },
       "trajectory": "stable"
@@ -1329,12 +1329,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 35826,
-          "stars_delta_30d": 2,
+          "stars": 35827,
+          "stars_delta_30d": 1,
           "open_issues": 1514,
           "last_commit_days_ago": 0,
           "forks": 4702,
-          "fetched_at": "2026-06-24T19:58:49.266158+00:00"
+          "fetched_at": "2026-06-25T04:17:51.348625+00:00"
         }
       },
       "trajectory": "stable"
@@ -1364,12 +1364,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 36581,
-          "stars_delta_30d": 3,
+          "stars": 36586,
+          "stars_delta_30d": 5,
           "open_issues": 237,
           "last_commit_days_ago": 0,
           "forks": 492,
-          "fetched_at": "2026-06-24T19:58:49.283504+00:00"
+          "fetched_at": "2026-06-25T04:17:51.366352+00:00"
         }
       },
       "trajectory": "stable"
@@ -1401,7 +1401,7 @@
         "npm": {
           "downloads_weekly": 673687,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:49.318109+00:00"
+          "fetched_at": "2026-06-25T04:17:51.401985+00:00"
         }
       },
       "trajectory": "stable"
@@ -1431,12 +1431,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 15317,
-          "stars_delta_30d": 0,
+          "stars": 15318,
+          "stars_delta_30d": 1,
           "open_issues": 858,
           "last_commit_days_ago": 1,
           "forks": 2583,
-          "fetched_at": "2026-06-24T19:58:49.335299+00:00"
+          "fetched_at": "2026-06-25T04:17:51.419827+00:00"
         }
       },
       "trajectory": "stable"
@@ -1466,12 +1466,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 32958,
-          "stars_delta_30d": 1,
-          "open_issues": 428,
+          "stars": 32969,
+          "stars_delta_30d": 11,
+          "open_issues": 429,
           "last_commit_days_ago": 0,
-          "forks": 15299,
-          "fetched_at": "2026-06-24T19:58:49.352664+00:00"
+          "forks": 15300,
+          "fetched_at": "2026-06-25T04:17:51.437719+00:00"
         }
       },
       "trajectory": "stable"
@@ -1502,11 +1502,11 @@
       "metrics": {
         "github": {
           "stars": 13727,
-          "stars_delta_30d": 2,
-          "open_issues": 251,
+          "stars_delta_30d": 0,
+          "open_issues": 252,
           "last_commit_days_ago": 0,
           "forks": 4012,
-          "fetched_at": "2026-06-24T19:58:49.369986+00:00"
+          "fetched_at": "2026-06-25T04:17:51.455611+00:00"
         }
       },
       "trajectory": "stable"
@@ -1536,12 +1536,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 20085,
+          "stars": 20087,
           "stars_delta_30d": 2,
           "open_issues": 509,
           "last_commit_days_ago": 0,
-          "forks": 1846,
-          "fetched_at": "2026-06-24T19:58:49.387242+00:00"
+          "forks": 1848,
+          "fetched_at": "2026-06-25T04:17:51.473328+00:00"
         }
       },
       "trajectory": "stable"
@@ -1571,17 +1571,17 @@
       ],
       "metrics": {
         "github": {
-          "stars": 44920,
-          "stars_delta_30d": 0,
-          "open_issues": 1361,
+          "stars": 44921,
+          "stars_delta_30d": 1,
+          "open_issues": 1362,
           "last_commit_days_ago": 0,
           "forks": 11162,
-          "fetched_at": "2026-06-24T19:58:49.422007+00:00"
+          "fetched_at": "2026-06-25T04:17:51.508878+00:00"
         },
         "npm": {
           "downloads_weekly": 42234441,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:49.439283+00:00"
+          "fetched_at": "2026-06-25T04:17:51.526643+00:00"
         }
       },
       "trajectory": "stable"
@@ -1611,12 +1611,12 @@
       ],
       "metrics": {
         "github": {
-          "stars": 15275,
-          "stars_delta_30d": 0,
-          "open_issues": 1682,
+          "stars": 15276,
+          "stars_delta_30d": 1,
+          "open_issues": 1678,
           "last_commit_days_ago": 0,
           "forks": 3736,
-          "fetched_at": "2026-06-24T19:58:49.456506+00:00"
+          "fetched_at": "2026-06-25T04:17:51.544412+00:00"
         }
       },
       "trajectory": "stable"
@@ -1646,17 +1646,17 @@
       ],
       "metrics": {
         "github": {
-          "stars": 174859,
-          "stars_delta_30d": 17,
-          "open_issues": 3492,
+          "stars": 174870,
+          "stars_delta_30d": 11,
+          "open_issues": 3487,
           "last_commit_days_ago": 0,
-          "forks": 16719,
-          "fetched_at": "2026-06-24T19:58:49.492022+00:00"
+          "forks": 16716,
+          "fetched_at": "2026-06-25T04:17:51.581593+00:00"
         },
         "npm": {
           "downloads_weekly": 27592306,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:49.509234+00:00"
+          "fetched_at": "2026-06-25T04:17:51.599521+00:00"
         }
       },
       "trajectory": "stable"
@@ -1686,23 +1686,23 @@
       ],
       "metrics": {
         "github": {
-          "stars": 140107,
-          "stars_delta_30d": 16,
-          "open_issues": 407,
+          "stars": 140127,
+          "stars_delta_30d": 20,
+          "open_issues": 410,
           "last_commit_days_ago": 1,
-          "forks": 23236,
-          "fetched_at": "2026-06-24T19:58:49.526471+00:00"
+          "forks": 23238,
+          "fetched_at": "2026-06-25T04:17:51.617245+00:00"
         },
         "npm": {
           "downloads_weekly": 2505370,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:49.543649+00:00"
+          "fetched_at": "2026-06-25T04:17:51.635112+00:00"
         },
         "pypi": {
-          "downloads_last_month": 319993307,
-          "downloads_last_week": 77387025,
-          "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:49.560889+00:00"
+          "downloads_last_month": 319977804,
+          "downloads_last_week": 76828560,
+          "downloads_delta_pct": -0.72,
+          "fetched_at": "2026-06-25T04:17:51.653096+00:00"
         }
       },
       "trajectory": "stable"
@@ -1732,18 +1732,18 @@
       ],
       "metrics": {
         "github": {
-          "stars": 161875,
-          "stars_delta_30d": 10,
-          "open_issues": 2436,
+          "stars": 161882,
+          "stars_delta_30d": 7,
+          "open_issues": 2438,
           "last_commit_days_ago": 0,
-          "forks": 33587,
-          "fetched_at": "2026-06-24T19:58:49.578116+00:00"
+          "forks": 33591,
+          "fetched_at": "2026-06-25T04:17:51.671037+00:00"
         },
         "pypi": {
-          "downloads_last_month": 155655246,
-          "downloads_last_week": 38747195,
-          "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:49.595562+00:00"
+          "downloads_last_month": 157019498,
+          "downloads_last_week": 38868444,
+          "downloads_delta_pct": 0.31,
+          "fetched_at": "2026-06-25T04:17:51.688889+00:00"
         }
       },
       "trajectory": "stable"
@@ -1775,7 +1775,7 @@
         "npm": {
           "downloads_weekly": 6148558,
           "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:49.630263+00:00"
+          "fetched_at": "2026-06-25T04:17:51.724496+00:00"
         }
       },
       "trajectory": "stable"
@@ -1805,18 +1805,18 @@
       ],
       "metrics": {
         "github": {
-          "stars": 50355,
-          "stars_delta_30d": 4,
-          "open_issues": 485,
+          "stars": 50365,
+          "stars_delta_30d": 10,
+          "open_issues": 489,
           "last_commit_days_ago": 0,
-          "forks": 7623,
-          "fetched_at": "2026-06-24T19:58:49.647510+00:00"
+          "forks": 7626,
+          "fetched_at": "2026-06-25T04:17:51.742324+00:00"
         },
         "pypi": {
-          "downloads_last_month": 9020880,
-          "downloads_last_week": 1756066,
-          "downloads_delta_pct": 0.0,
-          "fetched_at": "2026-06-24T19:58:49.664822+00:00"
+          "downloads_last_month": 8859542,
+          "downloads_last_week": 1711401,
+          "downloads_delta_pct": -2.54,
+          "fetched_at": "2026-06-25T04:17:51.760060+00:00"
         }
       },
       "trajectory": "stable"
